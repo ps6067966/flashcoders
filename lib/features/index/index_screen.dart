@@ -15,7 +15,7 @@ class _IndexScreenState extends State<IndexScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome to Flash Coders"),
+            Text("Welcome everyone, Flash Coders"),
           ],
         ),
       ),
