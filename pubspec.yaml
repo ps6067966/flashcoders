@@ -7,8 +7,13 @@ environment:
   sdk: ">=3.0.5 <4.0.0"
 
 dependencies:
+  #sdk
   flutter:
     sdk: flutter
+
+  flutter_web_plugins:
+    sdk: flutter
+
   #c
   cupertino_icons: ^1.0.5
   #f
