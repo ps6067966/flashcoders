@@ -1,16 +1,11 @@
 # flashcoders
 
-A new Flutter project.
+We started this company Flash Coders with the vision _To create technology that empowers people to live better lives and make the world a better place, while also being mindful of the potential negative impacts of technology and working to mitigate them, and to do so in a way that is equitable, inclusive, sustainable, future-proof, and aligned with the UN Sustainable Development Goals, and that leaves a positive legacy for future generations._
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. First clone to repo 
+2. Select the feature you want to work on. 
+3. Discuss with other fellow contributers. 
+4. Write super clean, highly readable, with industry best practices code. 
+5. code will be reviewed
