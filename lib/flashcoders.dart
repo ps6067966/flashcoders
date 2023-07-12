@@ -1,3 +1,4 @@
+import 'package:flashcoders/theme/theme.dart';
 import 'package:flutter/material.dart';
 
 import 'features/index/index_screen.dart';
@@ -10,10 +11,7 @@ class FlashCoders extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flash Coders',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: AppTheme.getTheme(),
       home: const IndexScreen(),
     );
   }
