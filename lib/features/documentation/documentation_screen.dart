@@ -13,6 +13,7 @@ class DocumentationScreen extends StatelessWidget {
       body: Column(
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Expanded(
                 child: DocsHeading(),
