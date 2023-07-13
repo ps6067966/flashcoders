@@ -1,6 +1,7 @@
-import 'package:flashcoders/theme/colors.dart';
+import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'no_transition_builder.dart';
 
@@ -12,6 +13,7 @@ class AppTheme {
       appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.scaffoldBackgroundColor,
       ),
+      textTheme: GoogleFonts.robotoFlexTextTheme(),
       scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
       pageTransitionsTheme: PageTransitionsTheme(
         builders: kIsWeb

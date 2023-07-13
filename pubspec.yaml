@@ -24,6 +24,7 @@ dependencies:
   #f
   flutter_riverpod: ^2.3.6
   flutter_widget_from_html: ^0.10.3
+  google_fonts: ^5.1.0
 
 dev_dependencies:
   flutter_test:

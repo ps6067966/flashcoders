@@ -1,8 +1,7 @@
 import 'package:flashcoders/features/index/index_router.dart';
+import 'package:flashcoders/global/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
-import 'custom_app_bar_assets.dart';
 
 class LogoWithText extends StatelessWidget {
   const LogoWithText({super.key});
@@ -16,7 +15,7 @@ class LogoWithText extends StatelessWidget {
       child: Row(
         children: [
           Image.asset(
-            flashCodersLogo,
+            AppAssets.flashCodersLogo,
             height: 55,
           ),
           const SizedBox(
