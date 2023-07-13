@@ -12,4 +12,4 @@ _Flash Coders company's vision is to create technology that empowers people to l
 
 ## Read Docs
 
-Documentation Link: https://flash-coders.web.app/docs
+Documentation Link: https://flashcoders.tech/docs

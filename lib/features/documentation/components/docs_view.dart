@@ -15,8 +15,10 @@ class DocsView extends ConsumerWidget {
         .first;
     return Padding(
       padding: const EdgeInsets.only(left: 40.0, right: 40),
-      child: HtmlWidget(
-        data.htmlView ?? "",
+      child: SelectionArea(
+        child: HtmlWidget(
+          data.htmlView ?? "",
+        ),
       ),
     );
   }

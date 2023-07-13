@@ -1,1 +1,1 @@
-const flashCodersLogo = "assets/logo/flash_coders_logo.png";
+const flashCodersLogo = "assets/logo/flash_coders_bg.png";
