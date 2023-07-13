@@ -14,7 +14,7 @@ class DocsView extends ConsumerWidget {
         .toList()
         .first;
     return Padding(
-      padding: const EdgeInsets.only(left: 40.0),
+      padding: const EdgeInsets.only(left: 40.0, right: 40),
       child: HtmlWidget(
         data.htmlView ?? "",
       ),
