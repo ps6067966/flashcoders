@@ -13,8 +13,11 @@ class DocsView extends ConsumerWidget {
         .where((e) => e.path == ref.watch(docsPathProvider).value)
         .toList()
         .first;
-    return HtmlWidget(
-      data.htmlView ?? "",
+    return Padding(
+      padding: const EdgeInsets.only(left: 40.0),
+      child: HtmlWidget(
+        data.htmlView ?? "",
+      ),
     );
   }
 }

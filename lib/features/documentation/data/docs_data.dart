@@ -1,3 +1,6 @@
+import 'package:flashcoders/features/documentation/1_getting_started/code_guide.dart';
+import 'package:flashcoders/features/documentation/1_getting_started/how_to_contribute.dart';
+
 import '../1_getting_started/introduction.dart';
 import '../model/docs_model.dart';
 import '../model/docs_view_model.dart';
@@ -7,19 +10,26 @@ class DocsData {
     DocsHeadingModel(
       title: "Getting Started",
       subHeadings: [
+        DocsSubHeadingModel(title: "Introduction", path: introductionPath),
         DocsSubHeadingModel(
-            title: "Introduction", path: "/getting-started/introduction"),
-        DocsSubHeadingModel(
-            title: "Installation", path: "/getting-started/installation"),
-        DocsSubHeadingModel(title: "Usage", path: "/getting-started/usage"),
+            title: "How to contribute?", path: howToContributePath),
+        DocsSubHeadingModel(title: "Code Guide", path: codeGuidePath),
       ],
     ),
   ];
 
   static List<DocsViewModel> docsViewData = [
     DocsViewModel(
-      path: "/getting-started/introduction",
+      path: introductionPath,
       htmlView: introductionHtml,
+    ),
+    DocsViewModel(
+      path: howToContributePath,
+      htmlView: howToContributeHtml,
+    ),
+    DocsViewModel(
+      path: codeGuidePath,
+      htmlView: codeGuideHtml,
     ),
   ];
 }

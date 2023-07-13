@@ -21,6 +21,8 @@ class DocumentationScreen extends StatelessWidget {
               Expanded(
                 flex: 4,
                 child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     DocsView(),
                   ],
