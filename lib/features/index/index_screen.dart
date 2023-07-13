@@ -35,7 +35,7 @@ class _IndexScreenState extends State<IndexScreen> {
                     SizedBox(
                       width: 600,
                       child: Text(
-                        "Great Product at lightning speed, faster than ever before",
+                        "Great Product at lightening speed, faster than ever before",
                         style: GoogleFonts.robotoFlex().copyWith(
                           fontSize: 48,
                           fontWeight: FontWeight.bold,
