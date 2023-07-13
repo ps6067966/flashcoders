@@ -9,6 +9,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       toolbarHeight: 110,
+      elevation: 0,
       title: const Padding(
         padding: EdgeInsets.only(left: 160.0, right: 160, top: 20),
         child: Row(

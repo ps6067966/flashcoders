@@ -8,24 +8,29 @@ class DocumentationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: CustomAppBar(),
+    return Scaffold(
+      appBar: const CustomAppBar(),
       body: Column(
         children: [
           Row(
             children: [
-              Expanded(
+              const Expanded(
                 child: DocsHeading(),
               ),
-              VerticalDivider(),
+              const VerticalDivider(),
               Expanded(
                 flex: 4,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    DocsView(),
-                  ],
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height - 130,
+                  child: const SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        DocsView(),
+                      ],
+                    ),
+                  ),
                 ),
               ),
             ],
