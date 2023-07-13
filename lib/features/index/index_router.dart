@@ -4,9 +4,10 @@ import 'index_screen.dart';
 
 const indexPath = "/";
 
-final indexRouter = [
+final List<RouteBase> indexRouter = [
   GoRoute(
     path: indexPath,
+    name: indexPath,
     builder: (context, state) {
       return const IndexScreen();
     },

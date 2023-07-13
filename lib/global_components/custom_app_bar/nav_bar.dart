@@ -13,7 +13,7 @@ class NavBar extends StatelessWidget {
       children: [
         InkWell(
           onTap: () {
-            context.pushReplacement(docPath);
+            context.pushReplacementNamed(docPath, queryParameters: {"id": "1"});
           },
           child: const Text(
             "Docs",
@@ -27,7 +27,7 @@ class NavBar extends StatelessWidget {
         ),
         InkWell(
           onTap: () {
-            context.pushReplacement(blogPath);
+            context.pushReplacementNamed(blogPath);
           },
           child: const Text(
             "Blogs",

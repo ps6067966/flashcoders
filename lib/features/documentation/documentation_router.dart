@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 
 const docPath = "/docs";
 
-final docRouter = [
+final List<RouteBase> docRouter = [
   GoRoute(
     path: docPath,
     name: docPath,

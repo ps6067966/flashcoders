@@ -16,10 +16,14 @@ dependencies:
 
   #c
   cupertino_icons: ^1.0.5
+
   #f
   firebase_core: ^2.14.0
   #g
   go_router: ^9.0.3
+  #f
+  flutter_riverpod: ^2.3.6
+  flutter_widget_from_html: ^0.10.3
 
 dev_dependencies:
   flutter_test:
@@ -28,8 +32,7 @@ dev_dependencies:
   flutter_lints: ^2.0.2
   flutter_launcher_icons: ^0.13.1
 
-
-flutter_launcher_icons: 
+flutter_launcher_icons:
   web:
     generate: true
     image_path: "assets/logo/logo.png"

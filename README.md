@@ -4,9 +4,12 @@ _Flash Coders company's vision is to create technology that empowers people to l
 
 ## How to contribute?
 
-1. First clone to repo 
-2. Select the feature you want to work on. 
-3. Discuss with other fellow contributers. 
-4. Write super clean, highly readable, with industry best practices code. 
+1. First clone to repo
+2. Select the feature you want to work on.
+3. Discuss with other fellow contributers.
+4. Write super clean, highly readable, with industry best practices code.
 5. code will be reviewed throughly before merging.
- 
+
+## Read Docs
+
+Documentation Link: https://flash-coders.web.app/docs

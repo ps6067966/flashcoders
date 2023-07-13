@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 
 const blogPath = "/blogs";
 
-final blogRouter = [
+final List<RouteBase> blogRouter = [
   GoRoute(
     path: blogPath,
     name: blogPath,

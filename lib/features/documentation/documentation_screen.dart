@@ -1,3 +1,5 @@
+import 'package:flashcoders/features/documentation/components/docs_heading.dart';
+import 'package:flashcoders/features/documentation/components/docs_view.dart';
 import 'package:flashcoders/global_components/custom_app_bar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -8,13 +10,25 @@ class DocumentationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: CustomAppBar(),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text("Welcome to Documentation"),
-          ],
-        ),
+      body: Column(
+        children: [
+          Row(
+            children: [
+              Expanded(
+                child: DocsHeading(),
+              ),
+              VerticalDivider(),
+              Expanded(
+                flex: 4,
+                child: Column(
+                  children: [
+                    DocsView(),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }

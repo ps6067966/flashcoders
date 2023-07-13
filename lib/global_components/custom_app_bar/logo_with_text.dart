@@ -11,7 +11,7 @@ class LogoWithText extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.pushReplacement(indexPath);
+        context.pushReplacementNamed(indexPath);
       },
       child: Row(
         children: [
