@@ -1,5 +1,5 @@
 import 'package:flashcoders/features/documentation/0_whats_new/whats_new.dart';
-import 'package:flashcoders/features/documentation/1_getting_started/code_guide.dart';
+import 'package:flashcoders/features/documentation/1_getting_started/code_guideline.dart';
 import 'package:flashcoders/features/documentation/1_getting_started/how_to_contribute.dart';
 
 import '../1_getting_started/introduction.dart';
@@ -20,7 +20,7 @@ class DocsData {
         DocsSubHeadingModel(title: "Introduction", path: introductionPath),
         DocsSubHeadingModel(
             title: "How to contribute?", path: howToContributePath),
-        DocsSubHeadingModel(title: "Code Guide", path: codeGuidePath),
+        DocsSubHeadingModel(title: "Code Guideline", path: codeGuidelinePath),
       ],
     ),
   ];
@@ -35,8 +35,8 @@ class DocsData {
       htmlView: howToContributeHtml,
     ),
     DocsViewModel(
-      path: codeGuidePath,
-      htmlView: codeGuideHtml,
+      path: codeGuidelinePath,
+      htmlView: codeGuidelineHtml,
     ),
     DocsViewModel(
       path: whatsNewPath,

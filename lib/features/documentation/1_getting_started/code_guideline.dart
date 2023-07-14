@@ -1,5 +1,5 @@
-const codeGuidePath = "/getting-started/code-guide";
-const codeGuideHtml = """
+const codeGuidelinePath = "/getting-started/code-guide";
+const codeGuidelineHtml = """
 <h1><span style="font-family: Georgia, serif;">Code Guide</span></h1>
 <p><span style="font-family: Georgia, serif; font-size: 18px;">Some rules that will help in writing better code :&nbsp;</span></p>
 <ol>
