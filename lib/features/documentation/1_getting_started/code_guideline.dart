@@ -1,6 +1,6 @@
 const codeGuidelinePath = "/getting-started/code-guide";
 const codeGuidelineHtml = """
-<h1><span style="font-family: Georgia, serif;">Code Guide</span></h1>
+<h1><span style="font-family: Georgia, serif;">Code Guideline</span></h1>
 <p><span style="font-family: Georgia, serif; font-size: 18px;">Some rules that will help in writing better code :&nbsp;</span></p>
 <ol>
     <li><span style="font-family: Georgia, serif; font-size: 18px;">Always write documentation for your code, create a new documentHeading of your feature, and create sub heading to write documentation for the feature you&apos;re working on.&nbsp;</span></li>
