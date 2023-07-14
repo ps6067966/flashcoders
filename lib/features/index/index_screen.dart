@@ -3,6 +3,8 @@ import 'package:flashcoders/features/index/components/technology_stack.dart';
 import 'package:flashcoders/global_components/custom_app_bar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
+import 'components/product_management.dart';
+
 class IndexScreen extends StatefulWidget {
   const IndexScreen({super.key});
 
@@ -22,6 +24,7 @@ class _IndexScreenState extends State<IndexScreen> {
           children: [
             HeroSection(),
             TechnologyStack(),
+            ProductManagementImage(),
           ],
         ),
       ),

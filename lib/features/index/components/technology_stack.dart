@@ -25,15 +25,15 @@ class TechnologyStack extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
-            height: 10,
+            height: 40,
           ),
           const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Technology Stack",
+                "Technology Stack that makes development easier than ever before",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 30,
                   fontWeight: FontWeight.w600,
                 ),
               ),
@@ -51,21 +51,6 @@ class TechnologyStack extends StatelessWidget {
                     ))
                 .toList(),
           ),
-          // Center(
-          //   child: GridView.builder(
-          //       shrinkWrap: true,
-          //       itemCount: _techStack.length,
-          //       physics: const NeverScrollableScrollPhysics(),
-          //       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          //         crossAxisCount: 8,
-          //         mainAxisExtent: 100,
-          //         crossAxisSpacing: 20,
-          //         mainAxisSpacing: 20,
-          //       ),
-          //       itemBuilder: (context, index) {
-          //         return _techStack[index];
-          //       }),
-          // ),
           const SizedBox(
             height: 30,
           ),
