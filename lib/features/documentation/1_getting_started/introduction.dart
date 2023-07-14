@@ -18,7 +18,7 @@ const introductionHtml = """
 <ol>
     <li><span style="font-size: 18px;">Currently whole focus is on developing a cool website of flash coders in flutter.</span></li>
     <li><span style="font-size: 18px;">Strong team with great ideas.&nbsp;</span></li>
-    <li><span style="font-size: 18px;">Hands-on experience model needs to be implemented.&nbsp;</span></li>
+    <li><span style="font-size: 18px;">Hands-on learning experience model needs to be implemented.&nbsp;</span></li>
     <li><span style="font-size: 18px;">We need to find clients who believe on our work and stay with us for long term.</span></li>
 </ol>
 <p><br></p>
