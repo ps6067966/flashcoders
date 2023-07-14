@@ -30,7 +30,7 @@ class ProductManagementImage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "if why is clear, then how and what is easy. So start with why...",
+              "if why is clear, then how and what is easy. So always start with why...",
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,33 +29,36 @@ class HeroSection extends StatelessWidget {
                   "Great Product at lightening speed, faster than ever before",
                   style: GoogleFonts.robotoFlex().copyWith(
                     fontSize: 44,
-                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.3,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
               ),
               const SizedBox(
                 height: 60,
               ),
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(0),
-                  ),
-                  fixedSize: const Size.fromHeight(60),
-                  foregroundColor: Colors.white,
-                  backgroundColor: AppColors.primaryBlackColor,
-                ),
-                onPressed: () {
-                  context.pushNamed(docPath);
+              AnimatedButton(
+                onPress: () async {
+                  await Future.delayed(
+                    const Duration(milliseconds: 500),
+                    () => null,
+                  );
+                  // ignore: use_build_context_synchronously
+                  context.pushReplacementNamed(docPath);
                 },
-                child: const Text(
-                  "Documentation",
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w600,
-                  ),
+                width: 200,
+                height: 60,
+                text: 'Documentation',
+                selectedTextColor: AppColors.primaryBlackColor,
+                backgroundColor: AppColors.primaryBlackColor,
+                transitionType: TransitionType.LEFT_TO_RIGHT,
+                textStyle: const TextStyle(
+                  fontSize: 20,
+                  letterSpacing: 1.2,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w300,
                 ),
-              )
+              ),
             ],
           ),
           Image.asset(AppAssets.heroGif, height: 500),

@@ -34,7 +34,8 @@ class TechnologyStack extends StatelessWidget {
                 "Technology Stack that makes development easier than ever before",
                 style: TextStyle(
                   fontSize: 30,
-                  fontWeight: FontWeight.w600,
+                  letterSpacing: 1.2,
+                  fontWeight: FontWeight.w500,
                 ),
               ),
             ],
