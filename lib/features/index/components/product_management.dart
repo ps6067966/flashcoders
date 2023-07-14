@@ -48,27 +48,31 @@ class ProductManagementImage extends StatelessWidget {
             children: [
               Expanded(
                 flex: 2,
-                child: Card(
-                  elevation: 5,
-                  color: const Color(0xfffff7dc),
-                  child: Container(
-                    height: 400,
-                    decoration: const BoxDecoration(
-                      color: Color(0xfffff7dc),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "In today's world, design is more important than ever. \n\nIt's not just about making things look good. It's about creating products and services that are user-friendly, engaging, and effective.\n\nDesign can be used to improve customer experience, increase sales, and boost brand loyalty",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.normal,
+                child: InkWell(
+                  onTap: () {},
+                  onHover: (value) {},
+                  child: Card(
+                    elevation: 5,
+                    color: const Color(0xfffff7dc),
+                    child: Container(
+                      height: 400,
+                      decoration: const BoxDecoration(
+                        color: Color(0xfffff7dc),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "In today's world, design is more important than ever. \n\nIt's not just about making things look good. It's about creating products and services that are user-friendly, engaging, and effective.\n\nDesign can be used to improve customer experience, increase sales, and boost brand loyalty",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.normal,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -81,27 +85,31 @@ class ProductManagementImage extends StatelessWidget {
               ),
               Expanded(
                 flex: 2,
-                child: Card(
-                  elevation: 5,
-                  color: const Color(0xfffff7dc),
-                  child: Container(
-                    height: 400,
-                    decoration: const BoxDecoration(
-                      color: Color(0xfffff7dc),
-                    ),
-                    child: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Technology can help us to create more personalized experiences, collect data about our users, and deliver content in a more engaging way.\n\nBut it's important to use technology in the right way. We need to make sure that it's used to support our design goals, not to distract from them.",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.normal,
+                child: InkWell(
+                  onTap: () {},
+                  onHover: (value) {},
+                  child: Card(
+                    elevation: 5,
+                    color: const Color(0xfffff7dc),
+                    child: Container(
+                      height: 400,
+                      decoration: const BoxDecoration(
+                        color: Color(0xfffff7dc),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Technology can help us to create more personalized experiences, collect data about our users, and deliver content in a more engaging way.\n\nBut it's important to use technology in the right way. We need to make sure that it's used to support our design goals, not to distract from them.",
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.normal,
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
