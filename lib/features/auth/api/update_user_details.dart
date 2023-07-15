@@ -18,7 +18,8 @@ class UserApi {
         "roles": roles,
         "uid": uid,
         "photoUrl": photoUrl,
-        "timestamp": FieldValue.serverTimestamp(),
+        "createdAt": DateTime.now().toIso8601String(),
+        "updatedAt": FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
     } catch (e) {
       log("$e");
