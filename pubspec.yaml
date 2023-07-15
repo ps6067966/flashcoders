@@ -10,22 +10,25 @@ dependencies:
   #sdk
   flutter:
     sdk: flutter
-
   flutter_web_plugins:
     sdk: flutter
 
   #c
   cupertino_icons: ^1.0.5
+  cloud_firestore: ^4.8.3
 
   #f
   firebase_core: ^2.14.0
   #g
   go_router: ^9.0.3
   google_fonts: ^5.1.0
+  google_sign_in: ^6.1.4
   #f
   flutter_animated_button: ^2.0.3
   flutter_riverpod: ^2.3.6
   flutter_widget_from_html: ^0.10.3
+  firebase_auth: ^4.7.0
+  firebase_storage: ^11.2.5
 
 dev_dependencies:
   flutter_test:
