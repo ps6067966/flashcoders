@@ -9,14 +9,14 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       children: [
-        DocsNavTextButton(),
-        SizedBox(
+        const DocsNavTextButton(),
+        const SizedBox(
           width: 24,
         ),
-        BlogNavTextButton(),
-        SizedBox(
+        const BlogNavTextButton(),
+        const SizedBox(
           width: 24,
         ),
         SignInButton(),

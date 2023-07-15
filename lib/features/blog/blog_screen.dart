@@ -12,7 +12,12 @@ class BlogScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text("Welcome to Blog"),
+            Text(
+              "🔥Comming Very Soon🔥",
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
           ],
         ),
       ),
