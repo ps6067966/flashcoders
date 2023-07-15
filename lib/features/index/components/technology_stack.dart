@@ -1,3 +1,5 @@
+import 'package:flashcoders/features/index/index_assets.dart';
+import 'package:flashcoders/features/index/index_text.dart';
 import 'package:flutter/material.dart';
 
 class TechnologyStack extends StatelessWidget {
@@ -7,13 +9,13 @@ class TechnologyStack extends StatelessWidget {
         const FlutterLogo(size: 100),
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
-          child: Image.asset("assets/logo/firebase.png", height: 100),
+          child: Image.asset(IndexAssets.firebaseLogo, height: 100),
         ),
-        Image.asset("assets/logo/serverpod.png", height: 120),
-        Image.asset("assets/logo/Qwik.png", height: 100),
+        Image.asset(IndexAssets.serverpodLogo, height: 120),
+        Image.asset(IndexAssets.qwikLogo, height: 100),
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
-          child: Image.asset("assets/logo/pgsql.png", height: 100),
+          child: Image.asset(IndexAssets.postgreSQLLogo, height: 100),
         ),
       ];
 
@@ -31,7 +33,7 @@ class TechnologyStack extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Technology Stack that makes development easier than ever before",
+                IndexText.technologydStackHeading,
                 style: TextStyle(
                   fontSize: 30,
                   letterSpacing: 1.2,

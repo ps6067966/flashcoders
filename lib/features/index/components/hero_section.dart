@@ -1,9 +1,10 @@
+import 'package:flashcoders/features/index/index_assets.dart';
+import 'package:flashcoders/features/index/index_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../global/app_assets.dart';
 import '../../../theme/app_colors.dart';
 import '../../documentation/documentation_router.dart';
 
@@ -26,7 +27,7 @@ class HeroSection extends StatelessWidget {
               SizedBox(
                 width: 600,
                 child: Text(
-                  "Great Product at lightening speed, faster than ever before",
+                  IndexText.mainHeading,
                   style: GoogleFonts.robotoFlex().copyWith(
                     fontSize: 44,
                     letterSpacing: 1.3,
@@ -48,7 +49,7 @@ class HeroSection extends StatelessWidget {
                 },
                 width: 200,
                 height: 60,
-                text: 'Documentation',
+                text: IndexText.mainButtonText,
                 selectedTextColor: AppColors.primaryBlackColor,
                 backgroundColor: AppColors.primaryBlackColor,
                 transitionType: TransitionType.LEFT_TO_RIGHT,
@@ -61,7 +62,7 @@ class HeroSection extends StatelessWidget {
               ),
             ],
           ),
-          Image.asset(AppAssets.heroGif, height: 500),
+          Image.asset(IndexAssets.heroGif, height: 500),
         ],
       ),
     );

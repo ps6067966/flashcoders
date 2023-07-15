@@ -8,7 +8,10 @@ import 'no_transition_builder.dart';
 class AppTheme {
   static ThemeData getTheme() {
     return ThemeData(
-      colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
+      colorScheme: ColorScheme.fromSeed(
+        seedColor: AppColors.primaryBlackColor,
+        primary: AppColors.primaryBlackColor,
+      ),
       useMaterial3: true,
       appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.scaffoldBackgroundColor,
