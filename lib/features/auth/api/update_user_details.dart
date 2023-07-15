@@ -12,13 +12,14 @@ class UserApi {
     required List<String> roles,
   }) async {
     try {
-      await userCollection.doc().set({
+      await userCollection.doc(email).set({
         "name": name,
         "email": email,
         "roles": roles,
         "uid": uid,
         "photoUrl": photoUrl,
-      });
+        "timestamp": FieldValue.serverTimestamp(),
+      }, SetOptions(merge: true));
     } catch (e) {
       log("$e");
     }
