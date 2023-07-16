@@ -4,6 +4,7 @@ import 'package:flutter_web_plugins/url_strategy.dart';
 
 import 'firebase_options.dart';
 import 'flashcoders.dart';
+import 'global/analytics.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,5 +12,6 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.web,
   );
+  Analytics.initialLog();
   runApp(const FlashCoders());
 }
