@@ -1,3 +1,4 @@
+import 'package:flashcoders/features/marketplace/component/marketplace_nav_text_btn.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/auth/component/sign_in_button.dart';
@@ -11,6 +12,10 @@ class NavBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        const MarketplaceNavTextButton(),
+        const SizedBox(
+          width: 24,
+        ),
         const DocsNavTextButton(),
         const SizedBox(
           width: 24,
