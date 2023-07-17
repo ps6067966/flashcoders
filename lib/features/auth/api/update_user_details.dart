@@ -3,8 +3,9 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flashcoders/global/model/user_model.dart';
 
+import '../../../global/collections.dart';
+
 class UserApi {
-  static final userCollection = FirebaseFirestore.instance.collection("user");
   static Future<void> updateUserDetails({
     required String name,
     required String email,

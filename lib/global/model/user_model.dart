@@ -9,11 +9,13 @@ class UserModel {
   final List<String>? roles;
   final String? createdAt;
   final Timestamp? updatedAt;
+  final bool? isAdmin;
   UserModel({
     this.userId,
     this.uid,
     this.name,
     this.email,
+    this.isAdmin,
     this.photoUrl,
     this.roles,
     this.createdAt,
@@ -26,6 +28,7 @@ class UserModel {
       uid: map['uid'],
       name: map['name'],
       email: map['email'],
+      isAdmin: map['isAdmin'],
       photoUrl: map['photoUrl'],
       roles: List<String>.from(map['roles']),
       createdAt: map['createdAt'],
@@ -39,6 +42,7 @@ class UserModel {
       uid: snapshot['uid'],
       name: snapshot['name'],
       email: snapshot['email'],
+      isAdmin: snapshot['isAdmin'],
       photoUrl: snapshot['photoUrl'],
       roles: List<String>.from(snapshot['roles']),
       createdAt: snapshot['createdAt'],
@@ -56,6 +60,7 @@ class UserModel {
       'roles': roles,
       'createdAt': createdAt,
       'updatedAt': updatedAt,
+      'isAdmin': isAdmin ?? false,
     };
   }
 }
