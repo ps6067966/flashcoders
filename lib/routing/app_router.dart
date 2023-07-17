@@ -1,3 +1,4 @@
+import 'package:flashcoders/features/admin/admin_panel_router.dart';
 import 'package:flashcoders/features/blog/blog_router.dart';
 import 'package:flashcoders/features/documentation/documentation_router.dart';
 import 'package:flashcoders/features/marketplace/marketplace_router.dart';
@@ -10,6 +11,7 @@ final appRouter = GoRouter(
   initialLocation: "/",
   routes: [
     ...authRouter,
+    ...adminPanelRouter,
     ...indexRouter,
     ...marketplaceRouter,
     ...docRouter,
