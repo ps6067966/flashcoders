@@ -22,16 +22,22 @@ class UserApi {
       if (user.userId == null) {
         return;
       }
-      await userCollection.doc(email).set({
-        "user_id": user.userId! + 1,
-        "name": name,
-        "email": email,
-        "roles": roles,
-        "uid": uid,
-        "photoUrl": photoUrl,
-        "createdAt": DateTime.now().toIso8601String(),
-        "updatedAt": FieldValue.serverTimestamp(),
-      }, SetOptions(merge: true));
+      await userCollection.doc(email).set(
+          {
+            "user_id": user.userId! + 1,
+            "name": name,
+            "email": email,
+            "roles": roles,
+            "uid": uid,
+            "photoUrl": photoUrl,
+            "createdAt": DateTime.now().toIso8601String(),
+            "updatedAt": FieldValue.serverTimestamp(),
+          },
+          SetOptions(merge: true, mergeFields: [
+            "roles",
+            "updatedAt",
+            "photoUrl",
+          ]));
     } catch (e) {
       log("$e");
     }
