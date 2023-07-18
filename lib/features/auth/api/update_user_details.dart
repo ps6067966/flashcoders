@@ -22,7 +22,17 @@ class UserApi {
       if (user.userId == null) {
         return;
       }
-      await userCollection.doc(email).set(
+      await userCollection.doc(email).update(
+        {
+          "name": name,
+          "email": email,
+          "roles": roles,
+          "uid": uid,
+          "photoUrl": photoUrl,
+          "updatedAt": FieldValue.serverTimestamp(),
+        },
+      ).catchError((e) async {
+        await userCollection.doc(email).set(
           {
             "user_id": user.userId! + 1,
             "name": name,
@@ -33,11 +43,8 @@ class UserApi {
             "createdAt": DateTime.now().toIso8601String(),
             "updatedAt": FieldValue.serverTimestamp(),
           },
-          SetOptions(merge: true, mergeFields: [
-            "roles",
-            "updatedAt",
-            "photoUrl",
-          ]));
+        );
+      });
     } catch (e) {
       log("$e");
     }
