@@ -29,9 +29,10 @@ dependencies:
   go_router: ^9.0.3
   google_fonts: ^5.1.0
   google_sign_in: ^6.1.4
-
   #u
   url_launcher: ^6.1.12
+  #q
+  quill_html_editor: ^2.2.2
 
 dev_dependencies:
   flutter_test:
