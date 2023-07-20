@@ -1,0 +1,46 @@
+import 'package:flashcoders/features/admin/screens/marketplace/add_product/component/add_product_details.dart';
+import 'package:flashcoders/features/admin/screens/marketplace/add_product/component/add_product_image.dart';
+import 'package:flashcoders/global_components/custom_app_bar/custom_app_bar.dart';
+import 'package:flutter/material.dart';
+
+class AddProductInMarketplaceScreen extends StatelessWidget {
+  const AddProductInMarketplaceScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      appBar: CustomAppBar(),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: 160.0,
+            right: 160,
+          ),
+          child: Column(
+            children: [
+              Text(
+                "Add Product In Marketplace",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
+                  AddProductImage(),
+                  SizedBox(
+                    width: 30,
+                  ),
+                  AddProductDetails(),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
