@@ -45,7 +45,7 @@ class HeroSection extends StatelessWidget {
                     () => null,
                   );
                   // ignore: use_build_context_synchronously
-                  context.pushReplacementNamed(docPath);
+                  context.pushReplacementNamed(DocumentationPath.docs);
                 },
                 width: 200,
                 height: 60,

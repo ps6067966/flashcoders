@@ -10,7 +10,7 @@ class DocsNavTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.pushReplacementNamed(docPath);
+        context.pushReplacementNamed(DocumentationPath.docs);
       },
       child: const Text(
         "Docs",

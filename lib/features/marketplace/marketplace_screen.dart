@@ -1,5 +1,6 @@
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flashcoders/features/marketplace/marketplace_notifier.dart';
+import 'package:flashcoders/global/ximage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -54,8 +55,8 @@ class MarketplaceScreen extends StatelessWidget {
                                       child: CircularProgressIndicator(),
                                     ));
                                   }
-                                  return Image.network(
-                                    snapshot.data.toString(),
+                                  return XExtendedImage(
+                                    url: snapshot.data.toString(),
                                     fit: BoxFit.cover,
                                     alignment: Alignment.topCenter,
                                     width: double.infinity,

@@ -5,9 +5,13 @@ class XExtendedImage extends StatelessWidget {
   final String url;
   final double? width;
   final double? height;
+  final BoxFit? fit;
+  final Alignment alignment;
   const XExtendedImage({
     required this.url,
     this.width,
+    this.fit,
+    this.alignment = Alignment.center,
     this.height,
     super.key,
   });
@@ -20,6 +24,8 @@ class XExtendedImage extends StatelessWidget {
       cacheKey: url,
       width: width,
       height: height,
+      fit: fit,
+      alignment: alignment,
       loadStateChanged: (state) {
         switch (state.extendedImageLoadState) {
           case LoadState.loading:

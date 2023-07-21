@@ -1,3 +1,4 @@
+import 'package:flashcoders/features/flutter-institute/components/flutter_institute_nav_text_btn.dart';
 import 'package:flashcoders/features/marketplace/component/marketplace_nav_text_btn.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class NavBar extends StatelessWidget {
     return Row(
       children: [
         const AdminPanelNavTextButton(),
+        const FlutterInstituteNavTextButton(),
         const MarketplaceNavTextButton(),
         const SizedBox(
           width: 24,
