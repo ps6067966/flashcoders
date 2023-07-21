@@ -9,7 +9,7 @@ class MarketplaceNavTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.pushReplacementNamed(marketplacePath);
+        context.pushReplacementNamed(MarketPlacePath.marketplace);
       },
       child: Row(
         mainAxisSize: MainAxisSize.min,

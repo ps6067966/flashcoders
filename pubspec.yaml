@@ -17,14 +17,19 @@ dependencies:
   cupertino_icons: ^1.0.5
   cloud_firestore: ^4.8.3
 
+  #e
+  extended_image: ^8.0.2
+
   #f
   firebase_core: ^2.15.0
+  firebase_cached_image: ^0.4.4
   flutter_animated_button: ^2.0.3
   flutter_riverpod: ^2.3.6
   flutter_widget_from_html: ^0.10.3
   firebase_auth: ^4.7.1
   firebase_storage: ^11.2.5
   firebase_analytics: ^10.4.4
+  
   #g
   go_router: ^9.1.0
   google_fonts: ^5.1.0

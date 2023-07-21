@@ -1,6 +1,7 @@
 import 'package:flashcoders/features/admin/screens/marketplace/add_product/component/add_product_details.dart';
 import 'package:flashcoders/features/admin/screens/marketplace/add_product/component/add_product_image.dart';
 import 'package:flashcoders/global_components/custom_app_bar/custom_app_bar.dart';
+import 'package:flashcoders/global_components/footer/footer.dart';
 import 'package:flutter/material.dart';
 
 class AddProductInMarketplaceScreen extends StatelessWidget {
@@ -29,14 +30,19 @@ class AddProductInMarketplaceScreen extends StatelessWidget {
                 height: 20,
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   AddProductImage(),
                   SizedBox(
-                    width: 30,
+                    width: 100,
                   ),
                   AddProductDetails(),
                 ],
               ),
+              SizedBox(
+                height: 30,
+              ),
+              Footer(),
             ],
           ),
         ),

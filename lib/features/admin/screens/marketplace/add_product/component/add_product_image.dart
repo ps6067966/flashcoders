@@ -20,8 +20,8 @@ class AddProductImage extends StatelessWidget {
         },
         child: Card(
           child: Container(
-            width: 500,
-            height: 500,
+            width: 400,
+            height: 400,
             decoration: BoxDecoration(
               border: Border.all(),
               image: addProductModel != null && addProductModel.image != null
