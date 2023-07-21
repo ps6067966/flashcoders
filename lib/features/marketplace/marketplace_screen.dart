@@ -27,7 +27,7 @@ class MarketplaceScreen extends StatelessWidget {
                 shrinkWrap: true,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
-                  mainAxisExtent: 250,
+                  mainAxisExtent: 300,
                 ),
                 itemBuilder: (context, index) {
                   final data = marketplaceData.value![index];

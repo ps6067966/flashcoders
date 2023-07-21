@@ -11,7 +11,7 @@ class XExtendedImage extends StatelessWidget {
     required this.url,
     this.width,
     this.fit,
-    this.alignment = Alignment.center,
+    this.alignment = Alignment.topCenter,
     this.height,
     super.key,
   });
