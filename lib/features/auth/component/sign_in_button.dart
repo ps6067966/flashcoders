@@ -43,8 +43,14 @@ class SignInButton extends StatelessWidget {
     }
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        foregroundColor: Colors.white,
-        backgroundColor: AppColors.primaryBlackColor,
+        foregroundColor:
+            GoRouterState.of(context).location.contains("flutter-institute")
+                ? AppColors.primaryBlackColor
+                : Colors.white,
+        backgroundColor:
+            GoRouterState.of(context).location.contains("flutter-institute")
+                ? Colors.white
+                : AppColors.primaryBlackColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),

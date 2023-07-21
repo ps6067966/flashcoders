@@ -1,5 +1,8 @@
 import 'package:flashcoders/global_components/custom_app_bar/custom_app_bar.dart';
+import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import 'components/flutter_institute_hero.dart';
 
 class FlutterInstituteScreen extends StatelessWidget {
   const FlutterInstituteScreen({super.key});
@@ -7,17 +10,13 @@ class FlutterInstituteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(),
-      body: Center(
+      backgroundColor: AppColors.primaryBlackColor,
+      appBar: CustomAppBar(backgroundColor: AppColors.primaryBlackColor),
+      body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text(
-              "🔥Coming Soon🔥",
-              style: TextStyle(
-                fontSize: 20,
-              ),
-            )
+            FlutterInstituteHero(),
           ],
         ),
       ),

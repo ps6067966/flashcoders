@@ -12,10 +12,14 @@ class DocsNavTextButton extends StatelessWidget {
       onTap: () {
         context.pushReplacementNamed(DocumentationPath.docs);
       },
-      child: const Text(
+      child: Text(
         "Docs",
         style: TextStyle(
           fontSize: 17,
+          color:
+              GoRouterState.of(context).location.contains("flutter-institute")
+                  ? Colors.white
+                  : Colors.black,
         ),
       ),
     );

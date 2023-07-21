@@ -34,10 +34,15 @@ class AdminPanelNavTextButton extends StatelessWidget {
                     onTap: () {
                       context.pushReplacementNamed(AdminPanelPath.adminPanel);
                     },
-                    child: const Text(
+                    child: Text(
                       "Admin",
                       style: TextStyle(
                         fontSize: 17,
+                        color: GoRouterState.of(context)
+                                .location
+                                .contains("flutter-institute")
+                            ? Colors.white
+                            : Colors.black,
                       ),
                     ),
                   ),

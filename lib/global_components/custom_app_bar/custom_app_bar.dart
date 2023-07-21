@@ -3,11 +3,13 @@ import 'package:flashcoders/global_components/custom_app_bar/nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const CustomAppBar({super.key});
+  final Color? backgroundColor;
+  const CustomAppBar({this.backgroundColor, super.key});
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      backgroundColor: backgroundColor,
       leading: const SizedBox(),
       toolbarHeight: 110,
       elevation: 0,

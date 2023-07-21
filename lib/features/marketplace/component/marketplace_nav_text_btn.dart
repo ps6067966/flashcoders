@@ -14,10 +14,15 @@ class MarketplaceNavTextButton extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
+           Text(
             "Marketplace",
             style: TextStyle(
               fontSize: 17,
+              color: GoRouterState.of(context)
+                      .location
+                      .contains("flutter-institute")
+                  ? Colors.white
+                  : Colors.black,
             ),
           ),
           const SizedBox(

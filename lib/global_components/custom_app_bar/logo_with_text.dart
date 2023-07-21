@@ -21,10 +21,14 @@ class LogoWithText extends StatelessWidget {
           const SizedBox(
             width: 10,
           ),
-          const Text(
+          Text(
             "Flash Coders",
             style: TextStyle(
-              color: Colors.black,
+              color: GoRouterState.of(context)
+                      .location
+                      .contains("flutter-institute")
+                  ? Colors.white
+                  : Colors.black,
               fontSize: 16,
             ),
           ),
