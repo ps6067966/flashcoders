@@ -8,6 +8,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      leading: const SizedBox(),
       toolbarHeight: 110,
       elevation: 0,
       title: const Padding(
