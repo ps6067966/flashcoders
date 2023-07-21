@@ -14,7 +14,7 @@ class MarketplaceNavTextButton extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-           Text(
+          Text(
             "Marketplace",
             style: TextStyle(
               fontSize: 17,
@@ -29,12 +29,13 @@ class MarketplaceNavTextButton extends StatelessWidget {
             width: 3,
           ),
           Container(
+            height: 20,
+            width: 50,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20),
               color: Colors.grey.shade100,
             ),
-            child: const Padding(
-              padding: EdgeInsets.only(left: 6.0, right: 6, top: 4, bottom: 4),
+            child: const Center(
               child: Text(
                 "New",
                 style: TextStyle(
