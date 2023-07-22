@@ -1,9 +1,8 @@
 import 'package:flashcoders/features/flutter-institute/flutter_institute_assets.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../theme/app_colors.dart';
+import 'enroll_now_button.dart';
 
 class FlutterInstituteHero extends StatelessWidget {
   const FlutterInstituteHero({super.key});
@@ -39,7 +38,7 @@ class FlutterInstituteHero extends StatelessWidget {
               SizedBox(
                 width: 600,
                 child: Text(
-                  "Stay up to date with the latest technologies",
+                  "Go from zero to pro in just 3 months",
                   style: GoogleFonts.robotoFlex().copyWith(
                     fontSize: 20,
                     color: Colors.white,
@@ -49,24 +48,15 @@ class FlutterInstituteHero extends StatelessWidget {
               const SizedBox(
                 height: 60,
               ),
-              AnimatedButton(
-                onPress: () async {
-                  await Future.delayed(
-                    const Duration(milliseconds: 500),
-                    () => null,
-                  );
-                },
-                width: 200,
-                height: 60,
-                text: "🔒 Enroll Now",
-                selectedTextColor: AppColors.primaryBlackColor,
-                backgroundColor: Colors.white,
-                transitionType: TransitionType.LEFT_TO_RIGHT,
-                textStyle: const TextStyle(
-                  fontSize: 20,
-                  letterSpacing: 1.2,
-                  color: AppColors.primaryBlackColor,
-                  fontWeight: FontWeight.w300,
+              const EnrollNowButton(),
+              const SizedBox(
+                height: 5,
+              ),
+              const Text(
+                "* Limited seat available, Hurry Up!",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 13,
                 ),
               ),
             ],
