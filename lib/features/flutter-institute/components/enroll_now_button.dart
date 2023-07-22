@@ -32,7 +32,7 @@ class EnrollNowButton extends StatelessWidget {
                   title: const Text(
                     "Reserve your seat now!",
                     style: TextStyle(
-                      fontSize: 26,
+                      fontSize: 22,
                       color: AppColors.primaryBlackColor,
                     ),
                   ),
