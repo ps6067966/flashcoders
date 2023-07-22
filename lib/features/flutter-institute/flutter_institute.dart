@@ -1,7 +1,9 @@
 import 'package:flashcoders/global_components/custom_app_bar/custom_app_bar.dart';
+import 'package:flashcoders/global_components/footer/footer.dart';
 import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
+import 'components/flutter_institute_details.dart';
 import 'components/flutter_institute_hero.dart';
 
 class FlutterInstituteScreen extends StatelessWidget {
@@ -17,6 +19,8 @@ class FlutterInstituteScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             FlutterInstituteHero(),
+            FlutterInstituteDetails(),
+            Footer(),
           ],
         ),
       ),

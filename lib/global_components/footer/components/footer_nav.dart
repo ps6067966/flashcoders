@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 
 import '../footer_notifier.dart';
 
@@ -33,6 +34,11 @@ class FooterNav extends ConsumerWidget {
               footer?.name ?? "",
               style: TextStyle(
                 fontSize: 20,
+                color: GoRouterState.of(context)
+                        .location
+                        .contains("flutter-institute")
+                    ? Colors.white
+                    : Colors.black,
                 fontWeight: FontWeight.bold,
                 decoration: footer?.isHovering ?? false
                     ? TextDecoration.underline

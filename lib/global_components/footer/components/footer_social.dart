@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../global/app_assets.dart';
@@ -19,10 +20,14 @@ class FooterSocial extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        const Text(
+        Text(
           "Follow us on",
           style: TextStyle(
             fontSize: 20,
+            color:
+                GoRouterState.of(context).location.contains("flutter-institute")
+                    ? Colors.white
+                    : Colors.black,
           ),
         ),
         const SizedBox(
