@@ -1,7 +1,6 @@
-import 'package:flashcoders/features/flutter-institute/flutter_institute_router.dart';
+import 'package:flashcoders/features/index/enquire_now_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
-import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../theme/app_colors.dart';
@@ -46,11 +45,11 @@ class MHeroSection extends StatelessWidget {
               () => null,
             );
             // ignore: use_build_context_synchronously
-            context.pushReplacementNamed(FlutterInstitutePath.flutterInstitute);
+            EnquireForm.showEnquireNowForm(context);
           },
           width: 170,
           height: 40,
-          text: "Flutter Institute",
+          text: "Enquire Now",
           selectedTextColor: AppColors.primaryBlackColor,
           backgroundColor: AppColors.primaryBlackColor,
           transitionType: TransitionType.LEFT_TO_RIGHT,
