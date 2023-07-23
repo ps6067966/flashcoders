@@ -2,7 +2,6 @@ import 'package:flashcoders/features/index/index_assets.dart';
 import 'package:flashcoders/features/index/index_text.dart';
 import 'package:flutter/material.dart';
 
-import '../desktop_components/design_technology_explain_card.dart';
 import 'm_design_technology_explain_card.dart';
 
 class MProductManagementImage extends StatelessWidget {
