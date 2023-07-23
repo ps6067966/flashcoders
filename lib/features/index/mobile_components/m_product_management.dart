@@ -19,7 +19,7 @@ class MProductManagementImage extends StatelessWidget {
           IndexText.askWhy,
           style: TextStyle(
             fontSize: 24,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w600,
           ),
           textAlign: TextAlign.center,
         ),

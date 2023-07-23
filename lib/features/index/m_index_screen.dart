@@ -7,8 +7,8 @@ import 'mobile_components/m_hero_section.dart';
 import 'mobile_components/m_product_management.dart';
 import 'mobile_components/m_technology_stack.dart';
 
-class IndexMobileScreen extends StatelessWidget {
-  const IndexMobileScreen({super.key});
+class MIndexScreen extends StatelessWidget {
+  const MIndexScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

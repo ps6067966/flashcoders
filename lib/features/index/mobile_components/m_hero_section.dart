@@ -1,10 +1,10 @@
+import 'package:flashcoders/features/flutter-institute/flutter_institute_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../theme/app_colors.dart';
-import '../../documentation/documentation_router.dart';
 import '../index_assets.dart';
 import '../index_text.dart';
 
@@ -46,11 +46,11 @@ class MHeroSection extends StatelessWidget {
               () => null,
             );
             // ignore: use_build_context_synchronously
-            context.pushReplacementNamed(DocumentationPath.docs);
+            context.pushReplacementNamed(FlutterInstitutePath.flutterInstitute);
           },
           width: 170,
           height: 40,
-          text: IndexText.mainButtonText,
+          text: "Flutter Institute",
           selectedTextColor: AppColors.primaryBlackColor,
           backgroundColor: AppColors.primaryBlackColor,
           transitionType: TransitionType.LEFT_TO_RIGHT,

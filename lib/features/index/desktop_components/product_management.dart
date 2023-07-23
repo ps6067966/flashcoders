@@ -21,8 +21,8 @@ class ProductManagementImage extends StatelessWidget {
             Text(
               IndexText.askWhy,
               style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
+                fontSize: 28,
+                fontWeight: FontWeight.w600,
               ),
             ),
           ],

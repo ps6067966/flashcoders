@@ -40,7 +40,6 @@ class FooterNav extends StatelessWidget {
                           .contains("flutter-institute")
                       ? Colors.white
                       : Colors.black,
-                  fontWeight: FontWeight.bold,
                   decoration: footer?.isHovering ?? false
                       ? TextDecoration.underline
                       : TextDecoration.none,

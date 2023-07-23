@@ -13,7 +13,6 @@ class MDesignTechnologyExplainCard extends StatelessWidget {
         elevation: 5,
         color: const Color(0xfffff7dc),
         child: Container(
-          height: 250,
           decoration: const BoxDecoration(
             color: Color(0xfffff7dc),
           ),

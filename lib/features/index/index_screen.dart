@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 
 import '../../global_components/footer/footer.dart';
 import 'desktop_components/product_management.dart';
-import 'index_mobile.dart';
+import 'm_index_screen.dart';
 
 class IndexScreen extends StatelessWidget {
   const IndexScreen({super.key});
@@ -15,7 +15,7 @@ class IndexScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const XResponsiveWrapper(
-      mobile: IndexMobileScreen(),
+      mobile: MIndexScreen(),
       desktop: Scaffold(
         appBar: XAppBar(),
         floatingActionButton: XFloatingActionButton(),
