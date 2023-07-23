@@ -1,4 +1,5 @@
 import 'package:flashcoders/global_components/footer/footer.dart';
+import 'package:flashcoders/global_components/x_drawer.dart';
 import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -14,6 +15,7 @@ class MFlutterInstituteScreen extends StatelessWidget {
     return const Scaffold(
       backgroundColor: AppColors.primaryBlackColor,
       appBar: XMobileAppBar(backgroundColor: AppColors.primaryBlackColor),
+      drawer: XDrawer(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

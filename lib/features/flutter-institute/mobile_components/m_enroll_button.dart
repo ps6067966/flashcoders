@@ -7,8 +7,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../../../theme/app_colors.dart';
 import '../coupon_applied_notifier.dart';
 
-class EnrollNowButton extends StatelessWidget {
-  const EnrollNowButton({super.key});
+class MEnrollNowButton extends StatelessWidget {
+  const MEnrollNowButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -135,8 +135,8 @@ class EnrollNowButton extends StatelessWidget {
             },
           );
         },
-        width: 200,
-        height: 60,
+        width: 170,
+        height: 40,
         text: "Enroll Now",
         gradient: const LinearGradient(colors: [
           AppColors.primaryColor,

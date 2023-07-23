@@ -2,7 +2,7 @@ import 'package:flashcoders/features/flutter-institute/flutter_institute_assets.
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../desktop_components/enroll_now_button.dart';
+import 'm_enroll_button.dart';
 
 class MFlutterInstituteHero extends StatelessWidget {
   const MFlutterInstituteHero({super.key});
@@ -43,7 +43,7 @@ class MFlutterInstituteHero extends StatelessWidget {
             const SizedBox(
               height: 60,
             ),
-            const EnrollNowButton(),
+            const MEnrollNowButton(),
             const SizedBox(
               height: 5,
             ),
