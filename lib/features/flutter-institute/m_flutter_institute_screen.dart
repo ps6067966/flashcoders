@@ -15,7 +15,7 @@ class MFlutterInstituteScreen extends StatelessWidget {
     return const Scaffold(
       backgroundColor: AppColors.primaryBlackColor,
       appBar: XMobileAppBar(backgroundColor: AppColors.primaryBlackColor),
-      drawer: XDrawer(),
+      endDrawer: XDrawer(),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
