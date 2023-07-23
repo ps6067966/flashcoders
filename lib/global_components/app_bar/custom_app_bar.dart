@@ -2,9 +2,9 @@ import 'package:flashcoders/global_components/app_bar/logo_with_text.dart';
 import 'package:flashcoders/global_components/app_bar/nav_bar.dart';
 import 'package:flutter/material.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class XAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color? backgroundColor;
-  const CustomAppBar({this.backgroundColor, super.key});
+  const XAppBar({this.backgroundColor, super.key});
 
   @override
   Widget build(BuildContext context) {

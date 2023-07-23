@@ -13,7 +13,7 @@ class FlutterInstituteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       backgroundColor: AppColors.primaryBlackColor,
-      appBar: CustomAppBar(backgroundColor: AppColors.primaryBlackColor),
+      appBar: XAppBar(backgroundColor: AppColors.primaryBlackColor),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

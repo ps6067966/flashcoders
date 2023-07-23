@@ -10,7 +10,7 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(),
+      appBar: const XAppBar(),
       body: Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

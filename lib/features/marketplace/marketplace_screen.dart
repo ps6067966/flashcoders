@@ -14,7 +14,7 @@ class MarketplaceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(),
+      appBar: const XAppBar(),
       body: Padding(
         padding: const EdgeInsets.only(left: 160.0, right: 160.0, top: 80),
         child: Column(

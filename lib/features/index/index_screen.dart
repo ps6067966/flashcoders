@@ -17,7 +17,7 @@ class IndexScreen extends StatelessWidget {
     return const XResponsiveWrapper(
       mobile: IndexMobileScreen(),
       desktop: Scaffold(
-        appBar: CustomAppBar(),
+        appBar: XAppBar(),
         floatingActionButton: XFloatingActionButton(),
         body: SingleChildScrollView(
           child: Column(

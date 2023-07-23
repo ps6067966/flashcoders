@@ -10,7 +10,7 @@ class AddProductInMarketplaceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(),
+      appBar: XAppBar(),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.only(
