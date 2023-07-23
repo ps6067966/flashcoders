@@ -1,12 +1,12 @@
-import 'package:flashcoders/features/index/components/hero_section.dart';
-import 'package:flashcoders/features/index/components/technology_stack.dart';
+import 'package:flashcoders/features/index/desktop_components/hero_section.dart';
+import 'package:flashcoders/features/index/desktop_components/technology_stack.dart';
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flashcoders/global_components/floating_action_button.dart';
 import 'package:flashcoders/global_components/xresponsive_wrapper.dart';
 import 'package:flutter/material.dart';
 
 import '../../global_components/footer/footer.dart';
-import 'components/product_management.dart';
+import 'desktop_components/product_management.dart';
 import 'index_mobile.dart';
 
 class IndexScreen extends StatelessWidget {
