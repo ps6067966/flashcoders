@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../features/flutter-institute/components/flutter_institute_nav_text_btn.dart';
+import '../features/flutter-institute/desktop_components/flutter_institute_nav_text_btn.dart';
 
 class XDrawer extends StatelessWidget {
   const XDrawer({super.key});

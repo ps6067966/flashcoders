@@ -1,4 +1,4 @@
-import 'package:flashcoders/features/flutter-institute/components/flutter_institute_nav_text_btn.dart';
+import 'package:flashcoders/features/flutter-institute/desktop_components/flutter_institute_nav_text_btn.dart';
 import 'package:flashcoders/features/marketplace/component/marketplace_nav_text_btn.dart';
 import 'package:flutter/material.dart';
 

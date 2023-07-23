@@ -1,5 +1,6 @@
 import 'package:flashcoders/global_components/app_bar/logo_with_text.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class XMobileAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Color? backgroundColor;
@@ -18,7 +19,12 @@ class XMobileAppBar extends StatelessWidget implements PreferredSizeWidget {
           onTap: () {
             Scaffold.of(context).openEndDrawer();
           },
-          child: const Icon(Icons.menu, color: Colors.black),
+          child: Icon(Icons.menu,
+              color: GoRouterState.of(context)
+                      .location
+                      .contains("flutter-institute")
+                  ? Colors.white
+                  : Colors.black),
         ),
         const SizedBox(width: 20),
       ],
