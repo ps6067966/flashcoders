@@ -32,7 +32,7 @@ class MFlutterInstituteDetails extends StatelessWidget {
               child: const Text(
                 "Oprezo India Private Limited  ↗️",
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 20,
                   color: AppColors.primaryColor,
                 ),
                 textAlign: TextAlign.center,
