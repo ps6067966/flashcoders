@@ -1,21 +1,47 @@
 import 'package:flashcoders/features/index/index_assets.dart';
 import 'package:flashcoders/features/index/index_text.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MTechnologyStack extends StatelessWidget {
   const MTechnologyStack({super.key});
 
   List<Widget> get _techStack => [
-        const FlutterLogo(size: 50),
-        Padding(
-          padding: const EdgeInsets.only(left: 16.0),
-          child: Image.asset(IndexAssets.firebaseLogo, height: 50),
+        InkWell(
+          onTap: () {
+            launchUrl(Uri.parse("https://flutter.dev/"));
+          },
+          child: const FlutterLogo(size: 50),
         ),
-        Image.asset(IndexAssets.serverpodLogo, height: 70),
-        Image.asset(IndexAssets.qwikLogo, height: 50),
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
-          child: Image.asset(IndexAssets.postgreSQLLogo, height: 50),
+          child: InkWell(
+            onTap: () {
+              launchUrl(Uri.parse("https://firebase.google.com/"));
+            },
+            child: Image.asset(IndexAssets.firebaseLogo, height: 50),
+          ),
+        ),
+        InkWell(
+          onTap: () {
+            launchUrl(Uri.parse("https://serverpod.dev/"));
+          },
+          child: Image.asset(IndexAssets.serverpodLogo, height: 70),
+        ),
+        InkWell(
+          onTap: () {
+            launchUrl(Uri.parse("https://qwik.builder.io/"));
+          },
+          child: Image.asset(IndexAssets.qwikLogo, height: 50),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(left: 16.0),
+          child: InkWell(
+            onTap: () {
+              launchUrl(Uri.parse("https://www.postgresql.org/"));
+            },
+            child: Image.asset(IndexAssets.postgreSQLLogo, height: 50),
+          ),
         ),
       ];
 

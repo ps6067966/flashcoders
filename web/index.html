@@ -93,6 +93,16 @@
     </div>
 
     <script>
+      const regExp = new RegExp(
+        "bot|google|baidu|bing|msn|teoma|slurp|yandex",
+        "i"
+      );
+      if (regExp.test(navigator.userAgent)) {
+        window.flutterWebRenderer = "html";
+      }
+    </script>
+
+    <script>
       window.addEventListener("load", function (ev) {
         var loading = document.querySelector("#loading");
         // Download main.dart.js

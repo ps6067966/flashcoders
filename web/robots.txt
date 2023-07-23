@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+Sitemap: https://flashcoders.tech/sitemap.xml
