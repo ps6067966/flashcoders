@@ -29,17 +29,19 @@ dependencies:
   firebase_auth: ^4.7.1
   firebase_storage: ^11.2.5
   firebase_analytics: ^10.4.4
-  
+
   #g
   go_router: ^9.1.1
   google_fonts: ^5.1.0
   google_sign_in: ^6.1.4
   #i
   image_picker: ^1.0.1
-  #u
-  url_launcher: ^6.1.12
   #q
   quill_html_editor: ^2.2.2
+  #r
+  responsive_framework: ^1.1.0
+  #u
+  url_launcher: ^6.1.12
 
 dev_dependencies:
   flutter_test:

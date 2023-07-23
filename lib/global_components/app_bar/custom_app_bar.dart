@@ -1,5 +1,5 @@
-import 'package:flashcoders/global_components/custom_app_bar/logo_with_text.dart';
-import 'package:flashcoders/global_components/custom_app_bar/nav_bar.dart';
+import 'package:flashcoders/global_components/app_bar/logo_with_text.dart';
+import 'package:flashcoders/global_components/app_bar/nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {

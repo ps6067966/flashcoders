@@ -1,5 +1,5 @@
 import 'package:flashcoders/features/admin/components/admin_grid_view.dart';
-import 'package:flashcoders/global_components/custom_app_bar/custom_app_bar.dart';
+import 'package:flashcoders/global_components/app_bar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class AdminPanelScreen extends StatelessWidget {
