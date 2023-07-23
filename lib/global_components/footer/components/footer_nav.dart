@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:responsive_framework/responsive_breakpoints.dart';
 
 import '../footer_notifier.dart';
 
@@ -34,7 +35,8 @@ class FooterNav extends StatelessWidget {
               child: Text(
                 footer?.name ?? "",
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize:
+                      ResponsiveBreakpoints.of(context).isDesktop ? 20 : 16,
                   color: GoRouterState.of(context)
                           .location
                           .contains("flutter-institute")

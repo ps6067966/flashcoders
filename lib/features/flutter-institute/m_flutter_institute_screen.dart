@@ -18,10 +18,16 @@ class MFlutterInstituteScreen extends StatelessWidget {
       endDrawer: XDrawer(),
       body: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            MFlutterInstituteHero(),
-            MFlutterInstituteDetails(),
+            Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  MFlutterInstituteHero(),
+                  MFlutterInstituteDetails(),
+                ],
+              ),
+            ),
             Footer(),
           ],
         ),

@@ -19,9 +19,17 @@ class MIndexScreen extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            MHeroSection(),
-            MTechnologyStack(),
-            MProductManagementImage(),
+            Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  MHeroSection(),
+                  MTechnologyStack(),
+                  MProductManagementImage(),
+                ],
+              ),
+            ),
             Footer(),
           ],
         ),
