@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../global_components/app_bar/custom_app_bar.dart';
+import '../../global_components/app_bar/x_app_bar.dart';
 import 'marketplace_router.dart';
 
 class MarketplaceScreen extends StatelessWidget {

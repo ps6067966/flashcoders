@@ -13,6 +13,7 @@ class LogoWithText extends StatelessWidget {
         context.pushReplacementNamed(indexPath);
       },
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
             AppAssets.flashCodersLogo,
