@@ -39,7 +39,7 @@ class AdminPanelNavTextButton extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 17,
                         color: GoRouterState.of(context)
-                                .location
+                                .uri.toString()
                                 .contains("flutter-institute")
                             ? Colors.white
                             : Colors.black,

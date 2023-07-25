@@ -40,7 +40,7 @@ class UserApi {
             "roles": roles,
             "uid": uid,
             "photoUrl": photoUrl,
-            "createdAt": DateTime.now().toIso8601String(),
+            "createdAt": FieldValue.serverTimestamp(),
             "updatedAt": FieldValue.serverTimestamp(),
           },
         );

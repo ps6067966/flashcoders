@@ -21,7 +21,7 @@ class XMobileAppBar extends StatelessWidget implements PreferredSizeWidget {
           },
           child: Icon(Icons.menu,
               color: GoRouterState.of(context)
-                      .location
+                      .uri.toString()
                       .contains("flutter-institute")
                   ? Colors.white
                   : Colors.black),

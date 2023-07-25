@@ -26,7 +26,7 @@ class LogoWithText extends StatelessWidget {
             "Flash Coders",
             style: TextStyle(
               color: GoRouterState.of(context)
-                      .location
+                      .uri.toString()
                       .contains("flutter-institute")
                   ? Colors.white
                   : Colors.black,

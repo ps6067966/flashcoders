@@ -25,7 +25,7 @@ class FooterSocial extends StatelessWidget {
           style: TextStyle(
             fontSize: 20,
             color:
-                GoRouterState.of(context).location.contains("flutter-institute")
+                GoRouterState.of(context).uri.toString().contains("flutter-institute")
                     ? Colors.white
                     : Colors.black,
           ),

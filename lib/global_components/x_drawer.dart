@@ -11,7 +11,7 @@ class XDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       backgroundColor:
-          GoRouterState.of(context).location.contains("flutter-institute")
+          GoRouterState.of(context).uri.toString().contains("flutter-institute")
               ? AppColors.primaryBlackColor
               : Colors.white,
       child: const Column(

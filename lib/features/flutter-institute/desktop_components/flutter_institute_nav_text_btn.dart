@@ -23,7 +23,7 @@ class FlutterInstituteNavTextButton extends StatelessWidget {
                 child: Icon(
                   Icons.school_rounded,
                   color: GoRouterState.of(context)
-                          .location
+                          .uri.toString()
                           .contains("flutter-institute")
                       ? Colors.amber
                       : const Color(0xff00008B),
@@ -38,7 +38,7 @@ class FlutterInstituteNavTextButton extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 17,
                   color: GoRouterState.of(context)
-                          .location
+                          .uri.toString()
                           .contains("flutter-institute")
                       ? Colors.white
                       : AppColors.primaryBlackColor,
