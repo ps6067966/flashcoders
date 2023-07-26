@@ -1,16 +1,19 @@
+import 'dart:developer';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flashcoders/features/blog/create_blog_notifier.dart';
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flashcoders/global_components/floating_action_button.dart';
 import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:quill_html_editor/quill_html_editor.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:html_editor_enhanced/html_editor.dart';
 
 class CreateBlogPostScreen extends StatelessWidget {
   CreateBlogPostScreen({super.key});
 
-  final QuillEditorController controller = QuillEditorController();
-
   final String name = FirebaseAuth.instance.currentUser?.displayName ?? "";
+  final HtmlEditorController controller = HtmlEditorController();
 
   @override
   Widget build(BuildContext context) {
@@ -23,46 +26,80 @@ class CreateBlogPostScreen extends StatelessWidget {
           right: 160,
         ),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
-            ToolBar(
-              toolBarColor: Colors.cyan.shade50,
-              activeIconColor: Colors.green,
-              padding: const EdgeInsets.all(8),
-              iconSize: 20,
-              controller: controller,
-              customButtons: [
-                InkWell(onTap: () {}, child: const Icon(Icons.favorite)),
-                InkWell(onTap: () {}, child: const Icon(Icons.add_circle)),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  child: Card(
+                    color: Colors.white,
+                    surfaceTintColor: Colors.white,
+                    elevation: 5,
+                    child: HtmlEditor(
+                      controller: controller,
+                      htmlToolbarOptions: const HtmlToolbarOptions(),
+                      htmlEditorOptions: const HtmlEditorOptions(
+                        hint: "Write a cool blog",
+                      ),
+                      otherOptions: const OtherOptions(
+                        height: 400,
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(
+                  width: 40,
+                ),
+                SizedBox(
+                  width: 350,
+                  child: Consumer(builder: (context, ref, child) {
+                    final refRead =
+                        ref.read(createBlogNotifierProvider.notifier);
+                    final blogModel = ref.watch(createBlogNotifierProvider);
+                    return Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        ElevatedButton(
+                          onPressed: blogModel.isLoading
+                              ? null
+                              : () {
+                                  refRead.pickImage();
+                                },
+                          child: const Text("Add a cover image"),
+                        ),
+                        const SizedBox(
+                          height: 30,
+                        ),
+                        blogModel.value != null &&
+                                blogModel.value?.image != null
+                            ? InkWell(
+                                onTap: () {
+                                  refRead.clearImage();
+                                },
+                                child: Stack(
+                                  children: [
+                                    SizedBox(
+                                      width: 200,
+                                      height: 200,
+                                      child:
+                                          Image.memory(blogModel.value!.image!),
+                                    ),
+                                    const Positioned.fill(
+                                      child: Align(
+                                        alignment: Alignment.topRight,
+                                        child: Icon(Icons.close),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )
+                            : const SizedBox()
+                      ],
+                    );
+                  }),
+                ),
               ],
-            ),
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.6,
-              child: QuillHtmlEditor(
-                text: "<h1>Welcome</h1>Share what you know😊",
-                hintText: 'Write blog post',
-                controller: controller,
-                isEnabled: true,
-                minHeight: MediaQuery.of(context).size.height * 0.6,
-                textStyle: const TextStyle(),
-                hintTextStyle: const TextStyle(),
-                hintTextAlign: TextAlign.start,
-                padding: const EdgeInsets.only(left: 10, top: 5),
-                hintTextPadding: EdgeInsets.zero,
-                backgroundColor: Colors.white,
-                onFocusChanged: (hasFocus) => debugPrint('has focus $hasFocus'),
-                onTextChanged: (text) => debugPrint('widget text change $text'),
-                onEditorCreated: () => debugPrint('Editor has been loaded'),
-                onEditorResized: (height) =>
-                    debugPrint('Editor resized $height'),
-                onSelectionChanged: (sel) =>
-                    debugPrint('${sel.index},${sel.length}'),
-                loadingBuilder: (context) {
-                  return const Center(
-                      child: CircularProgressIndicator(
-                    strokeWidth: 0.4,
-                  ));
-                },
-              ),
             ),
             const SizedBox(
               height: 20,
@@ -70,22 +107,44 @@ class CreateBlogPostScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: AppColors.primaryBlackColor,
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(0),
+                Consumer(builder: (context, ref, child) {
+                  final refRead = ref.read(createBlogNotifierProvider.notifier);
+                  final blogModel = ref.watch(createBlogNotifierProvider);
+                  return ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primaryBlackColor,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(0),
+                      ),
                     ),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    "Publish",
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                )
+                    onPressed: blogModel.isLoading
+                        ? null
+                        : () async {
+                            try {
+                              final data = await controller.getText();
+                              await refRead.publishBlog(context, data);
+                            } catch (e) {
+                              log("$e");
+                            }
+                          },
+                    child: blogModel.isLoading
+                        ? const SizedBox(
+                            width: 15,
+                            height: 15,
+                            child: CircularProgressIndicator(
+                              backgroundColor: Colors.white,
+                              strokeWidth: 2,
+                            ),
+                          )
+                        : const Text(
+                            "Publish",
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                          ),
+                  );
+                })
               ],
             )
           ],

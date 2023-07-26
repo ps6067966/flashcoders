@@ -81,7 +81,7 @@ class GoogleSignInButton extends StatelessWidget {
               logoAlignment: web.GSIButtonLogoAlignment.left,
               theme: web.GSIButtonTheme.filledBlack,
               text: web.GSIButtonText.continueWith,
-              type: web.GSIButtonType.icon,
+              type: web.GSIButtonType.standard,
             ));
           });
     });

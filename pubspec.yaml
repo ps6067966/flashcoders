@@ -15,7 +15,7 @@ dependencies:
 
   #c
   cupertino_icons: ^1.0.5
-  cloud_firestore: ^4.8.3
+  cloud_firestore: ^4.8.4
 
   #e
   extended_image: ^8.0.2
@@ -26,7 +26,7 @@ dependencies:
   flutter_animated_button: ^2.0.3
   flutter_riverpod: ^2.3.6
   flutter_widget_from_html: ^0.10.3
-  firebase_auth: ^4.7.1
+  firebase_auth: ^4.7.2
   firebase_storage: ^11.2.5
   firebase_analytics: ^10.4.4
 
@@ -34,10 +34,11 @@ dependencies:
   go_router: ^10.0.0
   google_fonts: ^5.1.0
   google_sign_in: ^6.1.4
+
   #i
   image_picker: ^1.0.1
   #q
-  quill_html_editor: ^2.2.2
+  html_editor_enhanced: ^2.5.1
   #r
   responsive_framework: ^1.1.0
   #u

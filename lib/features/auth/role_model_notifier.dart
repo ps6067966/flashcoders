@@ -16,14 +16,17 @@ class RoleNotifier extends AsyncNotifier<List<RoleModel>> {
     RoleModel(
       name: Roles.client,
       iconUrl: "https://img.icons8.com/bubbles/200/user-male.png",
+      isSelected: true,
     ),
     RoleModel(
       name: Roles.blogger,
       iconUrl: "https://img.icons8.com/bubbles/100/man-laptop-pencil.png",
+      isSelected: true,
     ),
     RoleModel(
       name: Roles.teamMember,
       iconUrl: "https://img.icons8.com/bubbles/100/user-group-man-woman.png",
+      isSelected: true,
     ),
   ];
 
