@@ -10,16 +10,18 @@ class BlogNavTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.pushReplacementNamed(blogPath);
+        context.pushReplacementNamed(BlogPath.blog);
       },
       child: Text(
         "Blogs",
         style: TextStyle(
           fontSize: 17,
-          color:
-              GoRouterState.of(context).uri.toString().contains("flutter-institute")
-                  ? Colors.white
-                  : Colors.black,
+          color: GoRouterState.of(context)
+                  .uri
+                  .toString()
+                  .contains("flutter-institute")
+              ? Colors.white
+              : Colors.black,
         ),
       ),
     );

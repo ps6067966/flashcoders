@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../theme/app_colors.dart';
@@ -103,7 +104,7 @@ class EnrollNowButton extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.pop(context);
+                        context.pop();
                       },
                     ),
                     Consumer(builder: (context, ref, child) {
@@ -115,7 +116,7 @@ class EnrollNowButton extends StatelessWidget {
                           ),
                         ),
                         onPressed: () {
-                          Navigator.pop(context);
+                          context.pop();
                           final isCouponApplied =
                               ref.watch(couponAppliedNotifierProvider).value ??
                                   false;

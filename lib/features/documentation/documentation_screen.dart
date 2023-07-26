@@ -3,6 +3,8 @@ import 'package:flashcoders/features/documentation/components/docs_view.dart';
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../global_components/floating_action_button.dart';
+
 class DocumentationScreen extends StatelessWidget {
   const DocumentationScreen({super.key});
 
@@ -10,6 +12,7 @@ class DocumentationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const XAppBar(),
+      floatingActionButton: const XFloatingActionButton(),
       body: Column(
         children: [
           Row(
