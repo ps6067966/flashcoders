@@ -1,5 +1,7 @@
 import 'dart:typed_data';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -39,30 +41,39 @@ class CreateBlogNotifier extends AsyncNotifier<BlogModel?> {
       return;
     }
     state = const AsyncValue.loading();
-    await sendFileImage();
+
+    final blogData =
+        await blogCollection.orderBy("id", descending: true).limit(1).get();
+    final blog = blogData.docs.first.data();
+
+    await sendFileImage(blog['id'] + 1);
+
     final userData = await userCollection
-        .orderBy("user_id", descending: true)
+        .where("email", isEqualTo: FirebaseAuth.instance.currentUser!.email)
         .limit(1)
         .get();
+
     final user = UserModel.fromMap(userData.docs.first.data());
+
     if (user.userId == null) {
       return;
     }
     await blogCollection.add({
-      'id': 1,
+      'id': blog['id'] + 1,
       'image': blogModel?.imageUrl,
       "user_id": user.userId,
       "name": user.name,
-      "photo_url"
+      "photo_url": user.photoUrl,
+      "email": user.email,
       "post": post,
-      'created_at': DateTime.now().millisecondsSinceEpoch,
+      'created_at': FieldValue.serverTimestamp(),
     });
     blogModel = null;
     state = AsyncData(blogModel);
   }
 
-  Future<void> sendFileImage() async {
-    final ref = FirebaseStorage.instance.ref().child('blog');
+  Future<void> sendFileImage(int id) async {
+    final ref = FirebaseStorage.instance.ref().child('blog').child("$id");
     await ref.putData(
         blogModel!.image!, SettableMetadata(contentType: 'image/png'));
     final url = await ref.getDownloadURL();
