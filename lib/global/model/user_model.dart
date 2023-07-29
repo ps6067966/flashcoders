@@ -7,7 +7,7 @@ class UserModel {
   final String? email;
   final String? photoUrl;
   final List<String>? roles;
-  final String? createdAt;
+  final Timestamp? createdAt;
   final Timestamp? updatedAt;
   final bool? isAdmin;
   UserModel({

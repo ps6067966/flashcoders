@@ -60,7 +60,6 @@ class _QuillEditorState extends State<QuillEditor> {
 
   @override
   void dispose() {
-    /// please do not forget to dispose the controller
     controller.dispose();
     super.dispose();
   }
