@@ -13,6 +13,7 @@ class FlashCoders extends StatelessWidget {
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Flash Coders',
+        localizationsDelegates: const [],
         builder: (context, child) => ResponsiveBreakpoints.builder(
           child: child!,
           breakpoints: [

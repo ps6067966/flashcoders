@@ -1,5 +1,5 @@
 import 'package:flashcoders/features/blog/blog_screen.dart';
-import 'package:flashcoders/features/blog/create_blog_post_screen.dart';
+import 'package:flashcoders/features/blog/quill_editor.dart';
 import 'package:go_router/go_router.dart';
 
 class BlogPath {
@@ -19,7 +19,7 @@ final List<RouteBase> blogRouter = [
     path: BlogPath.createBlogPost,
     name: BlogPath.createBlogPost,
     builder: (context, state) {
-      return CreateBlogPostScreen();
+      return const QuillEditor();
     },
   ),
 ];

@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flashcoders/features/blog/create_blog_notifier.dart';
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
@@ -7,13 +8,11 @@ import 'package:flashcoders/global_components/floating_action_button.dart';
 import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:html_editor_enhanced/html_editor.dart';
 
 class CreateBlogPostScreen extends StatelessWidget {
   CreateBlogPostScreen({super.key});
 
   final String name = FirebaseAuth.instance.currentUser?.displayName ?? "";
-  final HtmlEditorController controller = HtmlEditorController();
 
   @override
   Widget build(BuildContext context) {
@@ -31,20 +30,14 @@ class CreateBlogPostScreen extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Expanded(
+                const Expanded(
                   child: Card(
                     color: Colors.white,
                     surfaceTintColor: Colors.white,
                     elevation: 5,
-                    child: HtmlEditor(
-                      controller: controller,
-                      htmlToolbarOptions: const HtmlToolbarOptions(),
-                      htmlEditorOptions: const HtmlEditorOptions(
-                        hint: "Write a cool blog",
-                      ),
-                      otherOptions: const OtherOptions(
-                        height: 400,
-                      ),
+                    child: SizedBox(
+                      height: 350,
+                      child: SizedBox(),
                     ),
                   ),
                 ),
@@ -122,8 +115,7 @@ class CreateBlogPostScreen extends StatelessWidget {
                         ? null
                         : () async {
                             try {
-                              final data = await controller.getText();
-                              await refRead.publishBlog(context, data);
+                              await refRead.publishBlog(context, "");
                             } catch (e) {
                               log("$e");
                             }

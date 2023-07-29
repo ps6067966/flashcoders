@@ -37,8 +37,9 @@ dependencies:
 
   #i
   image_picker: ^1.0.1
-  #q
-  html_editor_enhanced: ^2.5.1
+
+  quill_html_editor: ^2.2.2
+
   #r
   responsive_framework: ^1.1.0
   #u
