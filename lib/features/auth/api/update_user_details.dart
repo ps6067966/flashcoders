@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../../../global/collections.dart';
+import '../../../global/model/user_model.dart';
 
 class UserApi {
   static Future<void> updateUserDetails({
@@ -13,14 +14,14 @@ class UserApi {
     required List<String> roles,
   }) async {
     try {
-      // final userData = await userCollection
-      //     .orderBy("user_id", descending: true)
-      //     .limit(1)
-      //     .get();
-      // final user = UserModel.fromMap(userData.docs.first.data());
-      // if (user.userId == null) {
-      //   return;
-      // }
+      final userData = await userCollection
+          .orderBy("user_id", descending: true)
+          .limit(1)
+          .get();
+      final user = UserModel.fromMap(userData.docs.first.data());
+      if (user.userId == null) {
+        return;
+      }
       await userCollection.doc(email).update(
         {
           "name": name,
@@ -33,7 +34,7 @@ class UserApi {
       ).catchError((e) async {
         await userCollection.doc(email).set(
           {
-            "user_id": 1,
+            "user_id": user.userId! + 1,
             "name": name,
             "email": email,
             "roles": roles,
