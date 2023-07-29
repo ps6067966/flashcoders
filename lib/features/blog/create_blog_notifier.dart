@@ -12,12 +12,12 @@ import '../../global/model/user_model.dart';
 import 'blog_collection.dart';
 
 final createBlogNotifierProvider =
-    AsyncNotifierProvider<CreateBlogNotifier, BlogModel?>(() {
+    AsyncNotifierProvider<CreateBlogNotifier, CreateBlogModel?>(() {
   return CreateBlogNotifier();
 });
 
-class CreateBlogNotifier extends AsyncNotifier<BlogModel?> {
-  BlogModel? blogModel;
+class CreateBlogNotifier extends AsyncNotifier<CreateBlogModel?> {
+  CreateBlogModel? blogModel;
 
   clearImage() {
     blogModel = null;
@@ -29,12 +29,15 @@ class CreateBlogNotifier extends AsyncNotifier<BlogModel?> {
         await ImagePicker().pickImage(source: ImageSource.gallery);
     if (pickedFile != null) {
       final bytes = await pickedFile.readAsBytes();
-      blogModel = BlogModel(image: bytes, file: pickedFile);
+      blogModel = CreateBlogModel(image: bytes, file: pickedFile);
       state = AsyncData(blogModel);
     }
   }
 
-  publishBlog(BuildContext context, String post) async {
+  publishBlog(
+      {required BuildContext context,
+      required String post,
+      required title}) async {
     if (blogModel == null || blogModel!.file == null) {
       ScaffoldMessenger.of(context)
           .showSnackBar(const SnackBar(content: Text("Please select a image")));
@@ -61,6 +64,7 @@ class CreateBlogNotifier extends AsyncNotifier<BlogModel?> {
     await blogCollection.add({
       'id': blog['id'] + 1,
       'image': blogModel?.imageUrl,
+      'title': title,
       "user_id": user.userId,
       "name": user.name,
       "photo_url": user.photoUrl,
@@ -81,14 +85,14 @@ class CreateBlogNotifier extends AsyncNotifier<BlogModel?> {
   }
 
   @override
-  BlogModel? build() {
+  CreateBlogModel? build() {
     return blogModel;
   }
 }
 
-class BlogModel {
+class CreateBlogModel {
   final XFile? file;
   final Uint8List? image;
   String? imageUrl;
-  BlogModel({required this.file, required this.image, this.imageUrl});
+  CreateBlogModel({required this.file, required this.image, this.imageUrl});
 }

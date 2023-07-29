@@ -35,6 +35,9 @@ dependencies:
   google_fonts: ^5.1.0
   google_sign_in: ^6.1.4
 
+  #h
+  html_viewer_elite: ^0.0.4
+
   #i
   image_picker: ^1.0.1
 

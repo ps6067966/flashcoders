@@ -4,10 +4,12 @@ import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../global_components/floating_action_button.dart';
 import '../auth/auth_router.dart';
+import 'blog_notifier.dart';
 
 class BlogScreen extends StatelessWidget {
   const BlogScreen({super.key});
@@ -75,21 +77,86 @@ class BlogScreen extends StatelessWidget {
                 )
               ],
             ),
-            const Spacer(),
-            const Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "🔥Comming Very Soon🔥",
-                    style: TextStyle(
-                      fontSize: 30,
-                    ),
-                  ),
-                ],
-              ),
+            const SizedBox(
+              height: 20,
             ),
-            const Spacer(),
+            Consumer(builder: (context, ref, child) {
+              final blogModel = ref.watch(blogNotifierProvider);
+              return GridView.builder(
+                itemCount: blogModel.value?.length ?? 0,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 4,
+                  crossAxisSpacing: 20,
+                  mainAxisSpacing: 20,
+                ),
+                shrinkWrap: true,
+                itemBuilder: (context, index) {
+                  final blog = blogModel.value?[index];
+                  return InkWell(
+                    onTap: () {
+                      context.pushNamed(
+                        BlogPath.blogDetails,
+                        pathParameters: {"id": blog?.id.toString() ?? ""},
+                      );
+                    },
+                    child: Card(
+                      elevation: 5,
+                      color: Colors.white,
+                      surfaceTintColor: Colors.white,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Image.network(
+                            blog?.image ?? "",
+                          ),
+                          const SizedBox(
+                            height: 6,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Text(
+                              blog?.title ?? "",
+                              style: const TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                              maxLines: 2,
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                CircleAvatar(
+                                  radius: 12,
+                                  backgroundImage: NetworkImage(
+                                    blog?.photoUrl ?? "",
+                                  ),
+                                ),
+                                const SizedBox(
+                                  width: 6,
+                                ),
+                                Text(
+                                  blog?.name ?? "",
+                                  style: const TextStyle(
+                                    fontSize: 16,
+                                    overflow: TextOverflow.ellipsis,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            }),
           ],
         ),
       ),
