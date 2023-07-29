@@ -28,11 +28,11 @@ class UserModel {
       uid: map['uid'],
       name: map['name'],
       email: map['email'],
-      isAdmin: map['isAdmin'],
-      photoUrl: map['photoUrl'],
+      isAdmin: map['is_admin'],
+      photoUrl: map['photo_url'],
       roles: List<String>.from(map['roles']),
-      createdAt: map['createdAt'],
-      updatedAt: map['updatedAt'],
+      createdAt: map['created_at'],
+      updatedAt: map['updated_at'],
     );
   }
 
@@ -42,11 +42,11 @@ class UserModel {
       uid: snapshot['uid'],
       name: snapshot['name'],
       email: snapshot['email'],
-      isAdmin: snapshot['isAdmin'],
-      photoUrl: snapshot['photoUrl'],
+      isAdmin: snapshot['is_admin'],
+      photoUrl: snapshot['photo_url'],
       roles: List<String>.from(snapshot['roles']),
-      createdAt: snapshot['createdAt'],
-      updatedAt: snapshot['updatedAt'],
+      createdAt: snapshot['created_at'],
+      updatedAt: snapshot['updated_at'],
     );
   }
 
@@ -56,11 +56,11 @@ class UserModel {
       'uid': uid,
       'name': name,
       'email': email,
-      'photoUrl': photoUrl,
+      'photo_url': photoUrl,
       'roles': roles,
-      'createdAt': createdAt,
-      'updatedAt': updatedAt,
-      'isAdmin': isAdmin ?? false,
+      'created_at': createdAt,
+      'updated_at': updatedAt,
+      'is_admin': isAdmin ?? false,
     };
   }
 }

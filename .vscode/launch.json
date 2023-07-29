@@ -11,6 +11,12 @@
       "args": ["-d", "chrome", "--web-port", "5000", "--web-renderer", "html"]
     },
     {
+      "name": "flashcoders (Edge)",
+      "request": "launch",
+      "type": "dart",
+      "args": ["-d", "edge", "--web-port", "5000", "--web-renderer", "html"]
+    },
+    {
       "name": "flashcoders (profile mode)",
       "request": "launch",
       "type": "dart",

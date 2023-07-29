@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../../global/collections.dart';
+import '../../global/model/user_model.dart';
 import 'blog_collection.dart';
 
 final createBlogNotifierProvider =
@@ -38,11 +40,22 @@ class CreateBlogNotifier extends AsyncNotifier<BlogModel?> {
     }
     state = const AsyncValue.loading();
     await sendFileImage();
+    final userData = await userCollection
+        .orderBy("user_id", descending: true)
+        .limit(1)
+        .get();
+    final user = UserModel.fromMap(userData.docs.first.data());
+    if (user.userId == null) {
+      return;
+    }
     await blogCollection.add({
       'id': 1,
       'image': blogModel?.imageUrl,
+      "user_id": user.userId,
+      "name": user.name,
+      "photo_url"
       "post": post,
-      'createdAt': DateTime.now().millisecondsSinceEpoch,
+      'created_at': DateTime.now().millisecondsSinceEpoch,
     });
     blogModel = null;
     state = AsyncData(blogModel);

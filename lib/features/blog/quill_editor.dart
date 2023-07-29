@@ -1,7 +1,12 @@
+import 'dart:developer';
+
+import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:quill_html_editor/quill_html_editor.dart';
 
 import '../../global_components/app_bar/x_app_bar.dart';
+import 'create_blog_notifier.dart';
 
 class QuillEditor extends StatefulWidget {
   const QuillEditor({super.key});
@@ -113,7 +118,8 @@ class _QuillEditorState extends State<QuillEditor> {
             Flexible(
               fit: FlexFit.tight,
               child: QuillHtmlEditor(
-                text: "<h1>Hello</h1>This is a quill html editor example 😊",
+                text:
+                    "<h1>Hey Bloggers</h1>We're eagerly waiting to for your next blog, Write something cool 😊",
                 hintText: 'Share the knowledge with the world',
                 controller: controller,
                 isEnabled: true,
@@ -147,6 +153,65 @@ class _QuillEditorState extends State<QuillEditor> {
                     debugPrint('index ${sel.index}, range ${sel.length}'),
               ),
             ),
+            SizedBox(
+              width: 350,
+              child: Consumer(builder: (context, ref, child) {
+                final refRead = ref.read(createBlogNotifierProvider.notifier);
+                final blogModel = ref.watch(createBlogNotifierProvider);
+                return Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    ElevatedButton(
+                      onPressed: blogModel.isLoading
+                          ? null
+                          : () {
+                              refRead.pickImage();
+                            },
+                      child: const Text("Add a cover image"),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    blogModel.value != null && blogModel.value?.image != null
+                        ? InkWell(
+                            onTap: () {
+                              refRead.clearImage();
+                            },
+                            child: Stack(
+                              children: [
+                                SizedBox(
+                                  width: 200,
+                                  height: 200,
+                                  child: Image.memory(blogModel.value!.image!),
+                                ),
+                                Positioned.fill(
+                                  child: Align(
+                                    alignment: Alignment.topRight,
+                                    child: Container(
+                                      width: 25,
+                                      height: 25,
+                                      decoration: const BoxDecoration(
+                                        color: AppColors.primaryBlackColor,
+                                        shape: BoxShape.circle,
+                                      ),
+                                      child: const Center(
+                                        child: Icon(
+                                          Icons.close,
+                                          color: Colors.white,
+                                          size: 16,
+                                        ),
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
+                          )
+                        : const SizedBox()
+                  ],
+                );
+              }),
+            ),
           ],
         ),
       ),
@@ -172,9 +237,50 @@ class _QuillEditorState extends State<QuillEditor> {
                   onPressed: () {
                     controller.clear();
                   }),
-              textButton(
-                text: 'Publish',
-                onPressed: () {},
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: 20.0,
+                  top: 4,
+                ),
+                child: Consumer(builder: (context, ref, child) {
+                  final refRead = ref.read(createBlogNotifierProvider.notifier);
+                  final blogModel = ref.watch(createBlogNotifierProvider);
+                  return ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primaryBlackColor,
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(0),
+                      ),
+                    ),
+                    onPressed: blogModel.isLoading
+                        ? null
+                        : () async {
+                            try {
+                              final data = await controller.getText();
+                              await refRead.publishBlog(context, data);
+                              controller.clear();
+                            } catch (e) {
+                              log("$e");
+                            }
+                          },
+                    child: blogModel.isLoading
+                        ? const SizedBox(
+                            width: 15,
+                            height: 15,
+                            child: CircularProgressIndicator(
+                              backgroundColor: Colors.white,
+                              strokeWidth: 2,
+                            ),
+                          )
+                        : const Text(
+                            "Publish",
+                            style: TextStyle(
+                              fontSize: 18,
+                            ),
+                          ),
+                  );
+                }),
               ),
             ],
           ),
