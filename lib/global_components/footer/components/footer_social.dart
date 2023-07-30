@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:responsive_framework/responsive_breakpoints.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../global/app_assets.dart';
@@ -23,11 +24,13 @@ class FooterSocial extends StatelessWidget {
         Text(
           "Follow us on",
           style: TextStyle(
-            fontSize: 20,
-            color:
-                GoRouterState.of(context).uri.toString().contains("flutter-institute")
-                    ? Colors.white
-                    : Colors.black,
+            fontSize: ResponsiveBreakpoints.of(context).isMobile ? 16 : 20,
+            color: GoRouterState.of(context)
+                    .uri
+                    .toString()
+                    .contains("flutter-institute")
+                ? Colors.white
+                : Colors.black,
           ),
         ),
         const SizedBox(

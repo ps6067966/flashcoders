@@ -9,12 +9,15 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: backgroundColor,
+      backgroundColor: backgroundColor?.withOpacity(0.5),
       leading: const SizedBox(),
       toolbarHeight: 110,
       elevation: 0,
+      automaticallyImplyLeading: false,
+      surfaceTintColor: backgroundColor?.withOpacity(0.5),
+      bottomOpacity: 0.5,
       title: const Padding(
-        padding: EdgeInsets.only(left: 100.0, right: 160, top: 20),
+        padding: EdgeInsets.only(left: 100.0, right: 160, top: 0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -27,5 +30,5 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(130);
+  Size get preferredSize => const Size.fromHeight(110);
 }

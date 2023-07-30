@@ -10,11 +10,12 @@ class MDesignTechnologyExplainCard extends StatelessWidget {
       onTap: () {},
       onHover: (value) {},
       child: Card(
-        elevation: 5,
-        color: const Color(0xfffff7dc),
+        elevation: 3,
+        color: Colors.white,
         child: Container(
-          decoration: const BoxDecoration(
-            color: Color(0xfffff7dc),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(8),
           ),
           child: Padding(
             padding: const EdgeInsets.all(8.0),

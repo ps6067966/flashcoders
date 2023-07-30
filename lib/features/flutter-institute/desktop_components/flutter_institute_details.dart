@@ -57,6 +57,9 @@ class FlutterInstituteDetails extends StatelessWidget {
           FlutterInstituteAssets.instituteOffer,
           height: 500,
         ),
+        const SizedBox(
+          height: 40,
+        ),
       ],
     );
   }

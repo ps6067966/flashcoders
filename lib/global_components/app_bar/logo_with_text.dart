@@ -2,6 +2,7 @@ import 'package:flashcoders/features/index/index_router.dart';
 import 'package:flashcoders/global/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:responsive_framework/responsive_breakpoints.dart';
 
 class LogoWithText extends StatelessWidget {
   const LogoWithText({super.key});
@@ -17,7 +18,7 @@ class LogoWithText extends StatelessWidget {
         children: [
           Image.asset(
             AppAssets.flashCodersLogo,
-            height: 55,
+            height: ResponsiveBreakpoints.of(context).isMobile ? 40 : 55,
           ),
           const SizedBox(
             width: 10,
@@ -26,7 +27,8 @@ class LogoWithText extends StatelessWidget {
             "Flash Coders",
             style: TextStyle(
               color: GoRouterState.of(context)
-                      .uri.toString()
+                      .uri
+                      .toString()
                       .contains("flutter-institute")
                   ? Colors.white
                   : Colors.black,

@@ -11,7 +11,7 @@ class MTechnologyStack extends StatelessWidget {
           onTap: () {
             launchUrl(Uri.parse("https://flutter.dev/"));
           },
-          child: const FlutterLogo(size: 50),
+          child: const FlutterLogo(size: 40),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
@@ -19,20 +19,20 @@ class MTechnologyStack extends StatelessWidget {
             onTap: () {
               launchUrl(Uri.parse("https://firebase.google.com/"));
             },
-            child: Image.asset(IndexAssets.firebaseLogo, height: 50),
+            child: Image.asset(IndexAssets.firebaseLogo, height: 40),
           ),
         ),
         InkWell(
           onTap: () {
             launchUrl(Uri.parse("https://serverpod.dev/"));
           },
-          child: Image.asset(IndexAssets.serverpodLogo, height: 70),
+          child: Image.asset(IndexAssets.serverpodLogo, height: 60),
         ),
         InkWell(
           onTap: () {
             launchUrl(Uri.parse("https://qwik.builder.io/"));
           },
-          child: Image.asset(IndexAssets.qwikLogo, height: 50),
+          child: Image.asset(IndexAssets.qwikLogo, height: 40),
         ),
         Padding(
           padding: const EdgeInsets.only(left: 16.0),
@@ -40,7 +40,7 @@ class MTechnologyStack extends StatelessWidget {
             onTap: () {
               launchUrl(Uri.parse("https://www.postgresql.org/"));
             },
-            child: Image.asset(IndexAssets.postgreSQLLogo, height: 50),
+            child: Image.asset(IndexAssets.postgreSQLLogo, height: 40),
           ),
         ),
       ];
@@ -65,14 +65,19 @@ class MTechnologyStack extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: _techStack
-              .map((e) => Padding(
-                    padding: const EdgeInsets.only(right: 10.0),
-                    child: e,
-                  ))
-              .toList(),
+        SizedBox(
+          width: double.infinity,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: _techStack
+                .map((e) => Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(right: 10.0),
+                        child: e,
+                      ),
+                    ))
+                .toList(),
+          ),
         ),
         const SizedBox(
           height: 30,

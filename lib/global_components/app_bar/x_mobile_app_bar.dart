@@ -11,7 +11,7 @@ class XMobileAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: backgroundColor,
       leading: const SizedBox(),
-      toolbarHeight: 90,
+      toolbarHeight: 70,
       elevation: 0,
       leadingWidth: 10,
       actions: [
@@ -21,7 +21,8 @@ class XMobileAppBar extends StatelessWidget implements PreferredSizeWidget {
           },
           child: Icon(Icons.menu,
               color: GoRouterState.of(context)
-                      .uri.toString()
+                      .uri
+                      .toString()
                       .contains("flutter-institute")
                   ? Colors.white
                   : Colors.black),
@@ -34,5 +35,5 @@ class XMobileAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(130);
+  Size get preferredSize => const Size.fromHeight(70);
 }

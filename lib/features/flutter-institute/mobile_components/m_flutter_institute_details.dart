@@ -54,11 +54,11 @@ class MFlutterInstituteDetails extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(
-          height: 30,
+          height: 40,
         ),
         Image.asset(
           FlutterInstituteAssets.instituteOffer,
-          height: 200,
+          height: 300,
         ),
         const SizedBox(
           height: 40,
