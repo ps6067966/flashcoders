@@ -9,12 +9,12 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: backgroundColor?.withOpacity(0.5),
+      backgroundColor: backgroundColor,
       leading: const SizedBox(),
       toolbarHeight: 110,
       elevation: 0,
       automaticallyImplyLeading: false,
-      surfaceTintColor: backgroundColor?.withOpacity(0.5),
+      surfaceTintColor: backgroundColor,
       bottomOpacity: 0.5,
       title: const Padding(
         padding: EdgeInsets.only(left: 100.0, right: 160, top: 0),

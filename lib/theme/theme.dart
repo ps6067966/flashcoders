@@ -13,6 +13,9 @@ class AppTheme {
         primary: AppColors.primaryBlackColor,
       ),
       useMaterial3: true,
+      cardTheme: const CardTheme(
+        surfaceTintColor: Colors.white,
+      ),
       appBarTheme: const AppBarTheme(
         backgroundColor: AppColors.scaffoldBackgroundColor,
       ),

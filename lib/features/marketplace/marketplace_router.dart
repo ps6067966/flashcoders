@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 
 class MarketPlacePath {
   static const String marketplace = "/marketplace";
-  static const String marketplaceDetails = "/marketplace-details";
+  static const String marketplaceDetails = "/marketplace/:id";
 }
 
 final List<RouteBase> marketplaceRouter = [
@@ -19,7 +19,10 @@ final List<RouteBase> marketplaceRouter = [
     path: MarketPlacePath.marketplaceDetails,
     name: MarketPlacePath.marketplaceDetails,
     builder: (context, state) {
-      return const MarketplaceDetailsScreen();
+      final id = int.tryParse(state.pathParameters["id"] ?? "0") ?? 0;
+      return MarketplaceDetailsScreen(
+        id: id,
+      );
     },
   ),
 ];

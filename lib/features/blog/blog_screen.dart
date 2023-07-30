@@ -144,7 +144,6 @@ class BlogScreen extends StatelessWidget {
                                   style: const TextStyle(
                                     fontSize: 16,
                                     overflow: TextOverflow.ellipsis,
-                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ],
