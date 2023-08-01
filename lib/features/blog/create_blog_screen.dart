@@ -266,24 +266,25 @@ class _CreateBlogScreenState extends State<CreateBlogScreen> {
                   final refRead = ref.read(createBlogNotifierProvider.notifier);
                   final blogModel = ref.watch(createBlogNotifierProvider);
                   return textButton(
-                      text: 'Publish',
-                      onPressed: blogModel.isLoading
-                          ? () {}
-                          : () async {
-                              try {
-                                final data = await controller.getText();
-                                if (mounted) {
-                                  await refRead.publishBlog(
-                                      context: context,
-                                      post: data,
-                                      title: _titleController.text);
-                                }
-                                controller.clear();
-                              } catch (e) {
-                                log("$e");
+                    text: 'Publish',
+                    onPressed: blogModel.isLoading
+                        ? () {}
+                        : () async {
+                            try {
+                              final data = await controller.getText();
+                              if (mounted) {
+                                await refRead.publishBlog(
+                                    context: context,
+                                    post: data,
+                                    title: _titleController.text);
                               }
-                            },
-                      blogModel: blogModel);
+                              controller.clear();
+                            } catch (e) {
+                              log("$e");
+                            }
+                          },
+                    blogModel: blogModel,
+                  );
                 }),
               ],
             ),
