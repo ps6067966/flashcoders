@@ -71,7 +71,7 @@ class _CreateBlogScreenState extends State<CreateBlogScreen> {
   @override
   Widget build(BuildContext context) {
     return XResponsiveWrapper(
-      mobile:  MCreateBlogScreen(),
+      mobile: const MCreateBlogScreen(),
       desktop: Scaffold(
         appBar: const XAppBar(),
         resizeToAvoidBottomInset: true,
