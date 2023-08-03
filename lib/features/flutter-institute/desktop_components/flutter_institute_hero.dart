@@ -1,5 +1,6 @@
 import 'package:flashcoders/features/flutter-institute/flutter_institute_assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'enroll_now_button.dart';
@@ -22,13 +23,20 @@ class FlutterInstituteHero extends StatelessWidget {
             children: [
               SizedBox(
                 width: 600,
-                child: Text(
-                  "Hands-on Flutter Learning Experience",
-                  style: GoogleFonts.robotoFlex().copyWith(
-                    fontSize: 44,
-                    letterSpacing: 1.2,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
+                child: Animate(
+                  effects: const [
+                    MoveEffect(
+                      duration: Duration(milliseconds: 500),
+                    ),
+                  ],
+                  child: Text(
+                    "Hands-on Flutter Learning Experience",
+                    style: GoogleFonts.robotoFlex().copyWith(
+                      fontSize: 44,
+                      letterSpacing: 1.2,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                 ),
               ),
@@ -37,13 +45,19 @@ class FlutterInstituteHero extends StatelessWidget {
               ),
               SizedBox(
                 width: 600,
-                child: Text(
-                  "Go from zero to pro in just 3 months",
-                  style: GoogleFonts.robotoFlex().copyWith(
-                    fontSize: 20,
-                    color: Colors.white,
-                  ),
-                ),
+                child: Animate(
+                    effects: const [
+                      MoveEffect(
+                        duration: Duration(milliseconds: 500),
+                      ),
+                    ],
+                    child: Text(
+                      "Go from zero to pro in just 3 months",
+                      style: GoogleFonts.robotoFlex().copyWith(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    )),
               ),
               const SizedBox(
                 height: 60,

@@ -21,6 +21,7 @@ dependencies:
   extended_image: ^8.0.2
 
   #f
+  flutter_animate: ^4.2.0+1
   firebase_core: ^2.15.0
   firebase_cached_image: ^0.4.4
   flutter_animated_button: ^2.0.3
