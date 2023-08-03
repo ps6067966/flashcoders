@@ -1,22 +1,22 @@
-import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
+import 'package:flashcoders/global_components/app_bar/x_mobile_app_bar.dart';
+import 'package:flashcoders/global_components/x_drawer.dart';
 import 'package:flutter/material.dart';
 
-import '../../global_components/xresponsive_wrapper.dart';
 import 'desktop_component/google_sign_in_button.dart';
-import 'desktop_component/select_role.dart';
-import 'm_auth_screen.dart';
+import 'mobile_component/m_select_role.dart';
 
-class AuthScreen extends StatelessWidget {
-  const AuthScreen({super.key});
+class MAuthScreen extends StatelessWidget {
+  const MAuthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return XResponsiveWrapper(
-      mobile: const MAuthScreen(),
-      desktop: Scaffold(
-        appBar: const XAppBar(),
-        body: Center(
+    return Scaffold(
+        endDrawer: const XDrawer(),
+        appBar: const XMobileAppBar(),
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Card(
@@ -28,37 +28,32 @@ class AuthScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const SizedBox(
-                        width: 700,
+                      const Center(
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text(
-                              "Flash Coders",
-                              style: TextStyle(
-                                fontSize: 26,
-                              ),
-                            ),
+                            Text("Flash Coders",
+                                style: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                )),
                           ],
                         ),
                       ),
                       const SizedBox(
                         height: 30,
                       ),
-                      const SelectRole(),
+                      const MSelectRole(),
                       const SizedBox(
                         height: 30,
                       ),
-                      SizedBox(
-                        width: 700,
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            GoogleSignInButton(),
-                          ],
-                        ),
+                      Row(
+                        mainAxisSize: MainAxisSize.min,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          GoogleSignInButton(),
+                        ],
                       ),
                       const SizedBox(
                         height: 20,
@@ -66,7 +61,7 @@ class AuthScreen extends StatelessWidget {
                       const Text(
                         "Note: You can select multiple roles, minimum 1 role is required to continue.",
                         style: TextStyle(
-                          fontSize: 14,
+                          fontSize: 13,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -76,8 +71,6 @@ class AuthScreen extends StatelessWidget {
               )
             ],
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

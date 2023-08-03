@@ -15,7 +15,7 @@ class MBlogDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const XDrawer(),
+      endDrawer: const XDrawer(),
       appBar: const XMobileAppBar(),
       body: SingleChildScrollView(
         child: Column(

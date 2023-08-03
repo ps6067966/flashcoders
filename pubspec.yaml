@@ -42,7 +42,7 @@ dependencies:
   #i
   image_picker: ^1.0.1
 
-  quill_html_editor: ^2.2.2
+  quill_html_editor: ^2.2.3
 
   #r
   responsive_framework: ^1.1.0

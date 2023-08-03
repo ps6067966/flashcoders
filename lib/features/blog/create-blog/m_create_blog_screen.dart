@@ -71,7 +71,7 @@ class _MCreateBlogScreenState extends State<MCreateBlogScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const XDrawer(),
+      endDrawer: const XDrawer(),
       appBar: const XMobileAppBar(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

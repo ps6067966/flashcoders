@@ -18,7 +18,7 @@ class MBlogScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const XDrawer(),
+      endDrawer: const XDrawer(),
       appBar: const XMobileAppBar(),
       body: SingleChildScrollView(
         child: Column(
@@ -137,11 +137,13 @@ class MBlogScreen extends StatelessWidget {
                                   const SizedBox(
                                     width: 6,
                                   ),
-                                  Text(
-                                    blog?.name ?? "",
-                                    style: const TextStyle(
-                                      fontSize: 16,
-                                      overflow: TextOverflow.ellipsis,
+                                  Expanded(
+                                    child: Text(
+                                      blog?.name ?? "",
+                                      style: const TextStyle(
+                                        fontSize: 16,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
                                     ),
                                   ),
                                 ],
