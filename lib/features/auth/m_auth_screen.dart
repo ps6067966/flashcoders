@@ -48,12 +48,14 @@ class MAuthScreen extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          GoogleSignInButton(),
-                        ],
+                      Center(
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            GoogleSignInButton(),
+                          ],
+                        ),
                       ),
                       const SizedBox(
                         height: 20,
