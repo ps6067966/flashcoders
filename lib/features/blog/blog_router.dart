@@ -1,6 +1,6 @@
-import 'package:flashcoders/features/blog/blog_details_screen.dart';
+import 'package:flashcoders/features/blog/blog-details/blog_details_screen.dart';
 import 'package:flashcoders/features/blog/blog_screen.dart';
-import 'package:flashcoders/features/blog/create_blog_screen.dart';
+import 'package:flashcoders/features/blog/create-blog/create_blog_screen.dart';
 import 'package:go_router/go_router.dart';
 
 class BlogPath {

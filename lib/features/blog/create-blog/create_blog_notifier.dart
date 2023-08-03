@@ -7,9 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:image_picker/image_picker.dart';
 
-import '../../global/collections.dart';
-import '../../global/model/user_model.dart';
-import 'blog_collection.dart';
+import '../../../global/collections.dart';
+import '../../../global/model/user_model.dart';
+import '../blog_collection.dart';
 
 final createBlogNotifierProvider =
     AsyncNotifierProvider<CreateBlogNotifier, CreateBlogModel?>(() {

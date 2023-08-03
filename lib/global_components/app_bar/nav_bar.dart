@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../../features/admin/components/admin_panel_nav_text_btn.dart';
 import '../../features/auth/component/sign_in_button.dart';
-import '../../features/blog/component/blog_nav_text_btn.dart';
+import '../../features/blog/desktop_component/blog_nav_text_btn.dart';
 import '../../features/documentation/components/docs_nav_text_btn.dart';
 
 class NavBar extends StatelessWidget {

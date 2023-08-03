@@ -1,7 +1,7 @@
 import 'package:flashcoders/features/blog/blog_collection.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'blog_model.dart';
+import '../blog_model.dart';
 
 final blogDetailsNotiferProvider =
     AsyncNotifierProvider<BlogDetailsNotifer, BlogModel?>(() {
