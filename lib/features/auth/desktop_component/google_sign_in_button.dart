@@ -60,8 +60,9 @@ class GoogleSignInButton extends StatelessWidget {
                 .map((e) => e.name.getName)
                 .toList(),
           );
-          // ignore: use_build_context_synchronously
-          GoRouter.of(context).pushReplacementNamed(indexPath);
+          if (context.mounted) {
+            GoRouter.of(context).pushReplacementNamed(indexPath);
+          }
         }
       }
     });

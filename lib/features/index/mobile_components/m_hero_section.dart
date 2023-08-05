@@ -44,8 +44,9 @@ class MHeroSection extends StatelessWidget {
               const Duration(milliseconds: 500),
               () => null,
             );
-            // ignore: use_build_context_synchronously
-            EnquireForm.showEnquireNowForm(context);
+            if (context.mounted) {
+              EnquireForm.showEnquireNowForm(context);
+            }
           },
           width: 170,
           height: 40,

@@ -43,8 +43,9 @@ class HeroSection extends StatelessWidget {
                     const Duration(milliseconds: 500),
                     () => null,
                   );
-                  // ignore: use_build_context_synchronously
-                  EnquireForm.showEnquireNowForm(context);
+                  if (context.mounted) {
+                    EnquireForm.showEnquireNowForm(context);
+                  }
                 },
                 width: 200,
                 height: 60,

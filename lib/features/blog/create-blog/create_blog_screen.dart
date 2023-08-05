@@ -278,7 +278,7 @@ class _CreateBlogScreenState extends State<CreateBlogScreen> {
                           : () async {
                               try {
                                 final data = await controller.getText();
-                                if (mounted) {
+                                if (context.mounted) {
                                   await refRead.publishBlog(
                                       context: context,
                                       post: data,
