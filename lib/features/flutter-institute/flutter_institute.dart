@@ -1,4 +1,5 @@
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
+import 'package:flashcoders/global_components/floating_action_button.dart';
 import 'package:flashcoders/global_components/footer/footer.dart';
 import 'package:flashcoders/global_components/xresponsive_wrapper.dart';
 import 'package:flashcoders/theme/app_colors.dart';
@@ -16,6 +17,7 @@ class FlutterInstituteScreen extends StatelessWidget {
     return const XResponsiveWrapper(
       mobile: MFlutterInstituteScreen(),
       desktop: Scaffold(
+        floatingActionButton: XFloatingActionButton(),
         backgroundColor: AppColors.primaryBlackColor,
         appBar: XAppBar(backgroundColor: AppColors.primaryBlackColor),
         body: SingleChildScrollView(

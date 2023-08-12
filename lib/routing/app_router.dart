@@ -6,6 +6,7 @@ import 'package:flashcoders/features/marketplace/marketplace_router.dart';
 import 'package:go_router/go_router.dart';
 
 import '../features/auth/auth_router.dart';
+import '../features/delete_account/delete_account_router.dart';
 import '../features/index/index_router.dart';
 
 final appRouter = GoRouter(
@@ -18,5 +19,6 @@ final appRouter = GoRouter(
     ...flutterInstituteRouter,
     ...docRouter,
     ...blogRouter,
+    ...deleteAccountRouter,
   ],
 );

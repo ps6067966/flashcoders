@@ -1,5 +1,6 @@
 import 'package:flashcoders/features/marketplace/marketplace_notifier.dart';
 import 'package:flashcoders/global/ximage.dart';
+import 'package:flashcoders/global_components/floating_action_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -16,6 +17,7 @@ class MarketplaceScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const XAppBar(),
+      floatingActionButton: const XFloatingActionButton(),
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -4,6 +4,7 @@ import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../global_components/app_bar/x_mobile_app_bar.dart';
+import '../../global_components/floating_action_button.dart';
 import 'mobile_components/m_flutter_institute_details.dart';
 import 'mobile_components/m_flutter_institute_hero.dart';
 
@@ -13,6 +14,7 @@ class MFlutterInstituteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      floatingActionButton: XFloatingActionButton(),
       backgroundColor: AppColors.primaryBlackColor,
       appBar: XMobileAppBar(backgroundColor: AppColors.primaryBlackColor),
       endDrawer: XDrawer(),
