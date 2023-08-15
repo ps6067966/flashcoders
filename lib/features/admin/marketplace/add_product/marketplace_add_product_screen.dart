@@ -1,5 +1,5 @@
-import 'package:flashcoders/features/admin/screens/marketplace/add_product/component/add_product_details.dart';
-import 'package:flashcoders/features/admin/screens/marketplace/add_product/component/add_product_image.dart';
+import 'package:flashcoders/features/admin/marketplace/add_product/component/add_product_details.dart';
+import 'package:flashcoders/features/admin/marketplace/add_product/component/add_product_image.dart';
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flashcoders/global_components/footer/footer.dart';
 import 'package:flutter/material.dart';

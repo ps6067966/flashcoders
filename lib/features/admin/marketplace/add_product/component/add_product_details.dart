@@ -1,6 +1,6 @@
 import 'dart:developer';
 
-import 'package:flashcoders/features/admin/screens/marketplace/add_product/marketplace_add_product_notifier.dart';
+import 'package:flashcoders/features/admin/marketplace/add_product/marketplace_add_product_notifier.dart';
 import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
