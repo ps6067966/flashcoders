@@ -4,7 +4,7 @@ description: Flash Coders company's vision is to create technology that empowers
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.0.6 <4.0.0"
+  sdk: ">=3.1.0 <4.0.0"
 
 dependencies:
   #sdk
@@ -15,24 +15,24 @@ dependencies:
 
   #c
   cupertino_icons: ^1.0.5
-  cloud_firestore: ^4.8.4
+  cloud_firestore: ^4.8.5
 
   #e
-  extended_image: ^8.0.2
+  extended_image: ^8.1.0
 
   #f
   flutter_animate: ^4.2.0+1
-  firebase_core: ^2.15.0
+  firebase_core: ^2.15.1
   firebase_cached_image: ^0.4.4
   flutter_animated_button: ^2.0.3
-  flutter_riverpod: ^2.3.6
+  flutter_riverpod: ^2.3.7
   flutter_widget_from_html: ^0.10.3
-  firebase_auth: ^4.7.2
-  firebase_storage: ^11.2.5
-  firebase_analytics: ^10.4.4
+  firebase_auth: ^4.7.3
+  firebase_storage: ^11.2.6
+  firebase_analytics: ^10.4.5
 
   #g
-  go_router: ^10.0.0
+  go_router: ^10.1.0
   google_fonts: ^5.1.0
   google_sign_in: ^6.1.4
 
@@ -40,9 +40,9 @@ dependencies:
   html_viewer_elite: ^0.0.4
 
   #i
-  image_picker: ^1.0.1
+  image_picker: ^1.0.2
 
-  quill_html_editor: ^2.2.3
+  quill_html_editor: ^2.2.5
 
   #r
   responsive_framework: ^1.1.0
