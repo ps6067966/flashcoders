@@ -8,8 +8,8 @@ import 'flashcoders.dart';
 import 'global/analytics.dart';
 
 Future<void> main() async {
-  
   WidgetsFlutterBinding.ensureInitialized();
+  // ignore: prefer_const_constructors
   setUrlStrategy(PathUrlStrategy());
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.web,
