@@ -1,5 +1,6 @@
 import 'package:flashcoders/features/index/desktop_components/hero_section.dart';
 import 'package:flashcoders/features/index/desktop_components/technology_stack.dart';
+import 'package:flashcoders/features/index/version_text.dart';
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flashcoders/global_components/floating_action_button.dart';
 import 'package:flashcoders/global_components/xresponsive_wrapper.dart';
@@ -27,6 +28,7 @@ class IndexScreen extends StatelessWidget {
               HeroSection(),
               TechnologyStack(),
               ProductManagementImage(),
+              VersionText(),
               Footer(),
             ],
           ),

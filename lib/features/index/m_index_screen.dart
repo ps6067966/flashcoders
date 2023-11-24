@@ -1,3 +1,4 @@
+import 'package:flashcoders/features/index/version_text.dart';
 import 'package:flashcoders/global_components/footer/footer.dart';
 import 'package:flutter/material.dart';
 
@@ -30,6 +31,7 @@ class MIndexScreen extends StatelessWidget {
                 ],
               ),
             ),
+            VersionText(),
             Footer(),
           ],
         ),
