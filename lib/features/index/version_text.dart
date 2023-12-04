@@ -8,7 +8,7 @@ class VersionText extends StatelessWidget {
     return const Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Text("Version 1.0.1"),
+        Text("Version 1.0.2"),
         SizedBox(
           width: 16,
         ),
