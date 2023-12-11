@@ -9,7 +9,7 @@ class TheOneAndOnlyDeleteAccountRequestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const XAppBar(),
+      // appBar: const XAppBar(),
       body: Center(
         child: Column(
           children: [
