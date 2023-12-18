@@ -2,6 +2,12 @@ const whatsNewPath = "/whats-new/";
 const whatsNewHtml = """
 <h1><span style="font-family: Georgia, serif; color: rgb(44, 130, 201); text-shadow: rgb(136, 136, 136) 0px 1px 2px;">What&apos;s New</span></h1>
 
+<h1><span style="font-family: Georgia, serif; font-size: 24px;"><strong>18 Dec 2023 -&nbsp;</strong></span></h1>
+<ol>
+    <li>
+        <h3 style="font-family: Georgia, serif; font-size: 18px;">Flutter 3.16.4 support</h3>
+    </li>
+</ol>
 
 <h1><span style="font-family: Georgia, serif; font-size: 24px;"><strong>26 Aug 2023 -&nbsp;</strong></span></h1>
 <ol>
