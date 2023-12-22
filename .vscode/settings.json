@@ -1,3 +1,6 @@
 {
-    "dart.flutterSdkPath": "~/Documents/flutter_windows_3.16.0-stable/flutter"
+    "dart.flutterSdkPath": "~/Documents/flutter_windows_3.16.0-stable/flutter",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    }
 }

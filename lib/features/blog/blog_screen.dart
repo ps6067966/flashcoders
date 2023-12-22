@@ -100,6 +100,7 @@ class BlogScreen extends StatelessWidget {
                           crossAxisCount: 4,
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 20,
+                          mainAxisExtent: 260,
                         ),
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
@@ -132,36 +133,43 @@ class BlogScreen extends StatelessWidget {
                                     child: Text(
                                       blog?.title ?? "",
                                       style: const TextStyle(
-                                        fontSize: 18,
+                                        fontSize: 16,
                                         fontWeight: FontWeight.bold,
                                       ),
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 2,
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: Row(
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        CircleAvatar(
-                                          radius: 12,
-                                          backgroundImage: NetworkImage(
-                                            blog?.photoUrl ?? "",
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          CircleAvatar(
+                                            radius: 12,
+                                            backgroundImage: NetworkImage(
+                                              blog?.photoUrl ?? "",
+                                            ),
                                           ),
-                                        ),
-                                        const SizedBox(
-                                          width: 6,
-                                        ),
-                                        Text(
-                                          blog?.name ?? "",
-                                          style: const TextStyle(
-                                            fontSize: 16,
-                                            overflow: TextOverflow.ellipsis,
+                                          const SizedBox(
+                                            width: 6,
                                           ),
-                                        ),
-                                      ],
+                                          Expanded(
+                                            child: Text(
+                                              blog?.name ?? "",
+                                              style: const TextStyle(
+                                                fontSize: 14,
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
                                     ),
+                                  ),
+                                  const SizedBox(
+                                    height: 6,
                                   ),
                                 ],
                               ),

@@ -13,7 +13,6 @@ class DesignTechnologyExplainCard extends StatelessWidget {
         elevation: 4,
         color: Colors.white,
         child: Container(
-          height: 400,
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(8),

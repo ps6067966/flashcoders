@@ -1,5 +1,4 @@
 import 'package:flashcoders/features/delete_account/delete_notifier.dart';
-import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
