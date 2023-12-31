@@ -1,5 +1,6 @@
 class IndexText {
-  static const mainHeading = "Effortless launch, endless possibilities";
+  static const mainHeading =
+      "Publish Apps and Websites with your brand name, faster than ever before";
   static const mainButtonText = "Documentation";
   static const askWhy = "Ask Why? Again and Again";
   static const technologydStackHeading =
