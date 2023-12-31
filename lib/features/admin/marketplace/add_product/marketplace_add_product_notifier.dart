@@ -31,7 +31,6 @@ class AddProductInMarketplaceNotifier extends AsyncNotifier<AddProductModel> {
       await Future.delayed(const Duration(seconds: 2));
       return addProductModel;
     });
-    
   }
 
   @override
@@ -44,6 +43,7 @@ class AddProductModel {
   final String? name;
   final String? price;
   final String? productDescription;
+  final String? productLink;
   final String? productType;
   final String? productCategory;
   final Uint8List? image;
@@ -52,6 +52,7 @@ class AddProductModel {
     this.name,
     this.price,
     this.productDescription,
+    this.productLink,
     this.productType,
     this.productCategory,
     this.image,
@@ -67,6 +68,7 @@ class AddProductModel {
     String? name,
     String? price,
     String? productDescription,
+    String? productLink,
     String? productType,
     String? productCategory,
     Uint8List? image,
@@ -75,6 +77,7 @@ class AddProductModel {
       name: name ?? this.name,
       price: price ?? this.price,
       productDescription: productDescription ?? this.productDescription,
+      productLink: productLink ?? this.productLink,
       productType: productType ?? this.productType,
       productCategory: productCategory ?? this.productCategory,
       image: image ?? this.image,

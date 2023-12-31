@@ -1,6 +1,8 @@
 import 'package:flashcoders/features/index/enquire_now_form.dart';
+import 'package:flashcoders/features/marketplace/marketplace_router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
+import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../theme/app_colors.dart';
@@ -45,12 +47,12 @@ class MHeroSection extends StatelessWidget {
               () => null,
             );
             if (context.mounted) {
-              EnquireForm.showEnquireNowForm(context);
+              context.push(MarketPlacePath.marketplace);
             }
           },
-          width: 170,
-          height: 40,
-          text: "Enquire Now",
+          width: 240,
+          height: 45,
+          text: "Deploy Apps and Websites",
           selectedTextColor: AppColors.primaryBlackColor,
           backgroundColor: AppColors.primaryBlackColor,
           transitionType: TransitionType.LEFT_TO_RIGHT,

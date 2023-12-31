@@ -1,9 +1,9 @@
 class IndexText {
-  static const mainHeading =
-      "Great Product at lightening speed, faster than ever before";
+  static const mainHeading = "Effortless launch, endless possibilities";
   static const mainButtonText = "Documentation";
   static const askWhy = "Ask Why? Again and Again";
-  static const technologydStackHeading = "Technology Stack that makes development easier than ever before";
+  static const technologydStackHeading =
+      "Technology Stack that makes development easier than ever before";
   static const ifWhyIsClear =
       "if why is clear, then how and what is easy. So always start with why...";
   static const designExplaination =

@@ -10,7 +10,7 @@ final marketplaceDetailsNotifierProvider =
 class MarketplaceDetailsNotifier extends AsyncNotifier<MarketplaceModel?> {
   MarketplaceModel? marketplaceModel;
 
-  Future<MarketplaceModel?> getBlog(int id) async {
+  Future<MarketplaceModel?> getProduct(int id) async {
     final data =
         await marketplaceCollection.where("id", isEqualTo: id).limit(1).get();
     marketplaceModel = MarketplaceModel.fromMap(data.docs.first.data());

@@ -28,10 +28,10 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                   final refRead =
                       ref.read(marketplaceDetailsNotifierProvider.notifier);
                   return FutureBuilder(
-                      future: refRead.getBlog(id),
+                      future: refRead.getProduct(id),
                       builder: (context, snapshot) {
-                        final blog = snapshot.data;
-                        if (blog?.imageUrl == null) {
+                        final product = snapshot.data;
+                        if (product?.imageUrl == null) {
                           return const Center(
                             child: CircularProgressIndicator(
                               strokeWidth: 2,
@@ -47,14 +47,14 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Image.network(
-                                    blog?.imageUrl ?? "",
+                                    product?.imageUrl ?? "",
                                     height: 400,
                                   ),
                                   const SizedBox(
                                     height: 24,
                                   ),
                                   Text(
-                                    blog?.title ?? "",
+                                    product?.title ?? "",
                                     style: const TextStyle(
                                       fontSize: 24,
                                       fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                     height: 24,
                                   ),
                                   Html(
-                                    data: blog?.description ?? "",
+                                    data: product?.description ?? "",
                                     onLinkTap:
                                         (url, context, attributes, element) {
                                       launchUrl(Uri.parse(url ?? ""));
@@ -72,6 +72,9 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                   ),
                                 ],
                               ),
+                            ),
+                            const SizedBox(
+                              width: 30,
                             ),
                             Expanded(
                               child: Card(
@@ -85,7 +88,7 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        blog?.title ?? "",
+                                        product?.title ?? "",
                                         style: const TextStyle(
                                           fontSize: 20,
                                         ),
@@ -94,7 +97,7 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                         height: 8,
                                       ),
                                       Text(
-                                        "Price: " "₹${blog?.price ?? ""}",
+                                        "Price: " "₹${product?.price ?? ""}",
                                         style: const TextStyle(
                                           fontSize: 20,
                                         ),
@@ -103,7 +106,7 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                         height: 8,
                                       ),
                                       Text(
-                                        blog?.description ?? "",
+                                        product?.description ?? "",
                                         style: const TextStyle(
                                           fontSize: 16,
                                         ),
@@ -119,14 +122,20 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                         children: [
                                           ElevatedButton(
                                             style: ElevatedButton.styleFrom(),
-                                            onPressed: () {},
-                                            child: const Text("Visit Website"),
+                                            onPressed: () {
+                                              launchUrl(Uri.parse(
+                                                  "${product?.link}"));
+                                            },
+                                            child: Text(
+                                                product?.productType == "app"
+                                                    ? "Visit Play Store"
+                                                    : "Visite Website"),
                                           ),
                                           ElevatedButton.icon(
                                             style: ElevatedButton.styleFrom(
                                               backgroundColor:
                                                   AppColors.primaryBlackColor,
-                                              fixedSize: const Size(140, 40),
+                                              fixedSize: const Size(200, 40),
                                               foregroundColor: Colors.white,
                                               shape: RoundedRectangleBorder(
                                                 borderRadius:
@@ -135,8 +144,12 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                             ),
                                             icon:
                                                 const Icon(Icons.shopping_cart),
-                                            onPressed: () {},
-                                            label: const Text("Buy Now"),
+                                            onPressed: () {
+                                              launchUrl(Uri.parse(
+                                                  "https://wa.me/+918058301863"));
+                                            },
+                                            label:
+                                                const Text("Buy on Whatsapp"),
                                           ),
                                         ],
                                       ),

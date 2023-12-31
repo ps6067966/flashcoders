@@ -30,7 +30,7 @@ class MarketplaceScreen extends StatelessWidget {
                   SizedBox(
                     width: 800,
                     child: Text(
-                      "Experience it before you buy it, Ready to use products that saves your time and money",
+                      "Don't start from scratch, Customize our apps to your needs to save time and money.",
                       style: GoogleFonts.montserrat().copyWith(
                         fontSize: 26,
                         fontWeight: FontWeight.w600,
@@ -63,7 +63,7 @@ class MarketplaceScreen extends StatelessWidget {
                       physics: const NeverScrollableScrollPhysics(),
                       gridDelegate:
                           const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
+                        crossAxisCount: 4,
                         mainAxisExtent: 300,
                       ),
                       itemBuilder: (context, index) {
@@ -83,11 +83,18 @@ class MarketplaceScreen extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Expanded(
-                                  child: XExtendedImage(
-                                    url: data.imageUrl.toString(),
-                                    fit: BoxFit.cover,
-                                    alignment: Alignment.topCenter,
-                                    width: double.infinity,
+                                  child: Center(
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                          color: Colors.grey.shade300,
+                                        ),
+                                      ),
+                                      child: XExtendedImage(
+                                        url: data.imageUrl.toString(),
+                                        fit: BoxFit.scaleDown,
+                                      ),
+                                    ),
                                   ),
                                 ),
                                 const SizedBox(
@@ -104,6 +111,15 @@ class MarketplaceScreen extends StatelessWidget {
                                         style: const TextStyle(
                                           fontSize: 20,
                                           fontWeight: FontWeight.w700,
+                                        ),
+                                      ),
+                                      const SizedBox(
+                                        height: 8,
+                                      ),
+                                      Text(
+                                        "Price: " "₹${data.price ?? ""}",
+                                        style: const TextStyle(
+                                          fontSize: 20,
                                         ),
                                       ),
                                     ],

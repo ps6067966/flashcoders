@@ -73,6 +73,30 @@ class AddProductDetails extends StatelessWidget {
                   hintText: "Enter Product Description",
                   border: OutlineInputBorder(),
                 ),
+                onChanged: (value) {
+                  refRead.updateData(addProductModel.value!
+                      .copyWith(productDescription: value));
+                },
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              const Text(
+                "Product Link",
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+              TextFormField(
+                maxLines: 3,
+                decoration: const InputDecoration(
+                  hintText: "Enter Product Link",
+                  border: OutlineInputBorder(),
+                ),
+                onChanged: (value) {
+                  refRead.updateData(
+                      addProductModel.value!.copyWith(productLink: value));
+                },
               ),
               const SizedBox(
                 height: 20,
