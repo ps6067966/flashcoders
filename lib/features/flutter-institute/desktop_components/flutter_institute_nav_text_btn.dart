@@ -1,5 +1,4 @@
 import 'package:flashcoders/features/flutter-institute/flutter_institute_router.dart';
-import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -23,10 +22,11 @@ class FlutterInstituteNavTextButton extends StatelessWidget {
                 child: Icon(
                   Icons.school_rounded,
                   color: GoRouterState.of(context)
-                          .uri.toString()
+                          .uri
+                          .toString()
                           .contains("flutter-institute")
-                      ? Colors.amber
-                      : const Color(0xff00008B),
+                      ? Colors.white
+                      : Colors.white,
                   size: 24,
                 ),
               ),
@@ -38,10 +38,11 @@ class FlutterInstituteNavTextButton extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 17,
                   color: GoRouterState.of(context)
-                          .uri.toString()
+                          .uri
+                          .toString()
                           .contains("flutter-institute")
                       ? Colors.white
-                      : AppColors.primaryBlackColor,
+                      : Colors.white,
                 ),
               ),
               const SizedBox(

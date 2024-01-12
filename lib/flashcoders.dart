@@ -13,6 +13,7 @@ class FlashCoders extends StatelessWidget {
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
         title: 'Flash Coders',
+        showPerformanceOverlay: false,
         localizationsDelegates: const [],
         builder: (context, child) => ResponsiveBreakpoints.builder(
           child: child!,
@@ -23,7 +24,9 @@ class FlashCoders extends StatelessWidget {
             const Breakpoint(start: 1921, end: double.infinity, name: '4K'),
           ],
         ),
+        themeMode: ThemeMode.dark,
         theme: AppTheme.getTheme(),
+        darkTheme: AppTheme.getTheme(),
         routerConfig: appRouter,
       ),
     );

@@ -38,10 +38,11 @@ class FooterNav extends StatelessWidget {
                   fontSize:
                       ResponsiveBreakpoints.of(context).isDesktop ? 20 : 16,
                   color: GoRouterState.of(context)
-                          .uri.toString()
+                          .uri
+                          .toString()
                           .contains("flutter-institute")
                       ? Colors.white
-                      : Colors.black,
+                      : Colors.white,
                   decoration: footer?.isHovering ?? false
                       ? TextDecoration.underline
                       : TextDecoration.none,

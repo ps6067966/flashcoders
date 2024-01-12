@@ -11,20 +11,19 @@ class DocsSubHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(left: 30.0),
-      child: Consumer(
-        builder: (context,ref,child) {
-          return ListTile(
-            onTap: () {
-              ref
-                  .read(docsPathProvider.notifier)
-                  .updateCurrentDocsPath(e.path ?? "");
-            },
-            title: Text(
-              e.title ?? "",
-            ),
-          );
-        }
-      ),
+      child: Consumer(builder: (context, ref, child) {
+        return ListTile(
+          onTap: () {
+            ref
+                .read(docsPathProvider.notifier)
+                .updateCurrentDocsPath(e.path ?? "");
+          },
+          title: Text(
+            e.title ?? "",
+            style: const TextStyle(color: Colors.white),
+          ),
+        );
+      }),
     );
   }
 }

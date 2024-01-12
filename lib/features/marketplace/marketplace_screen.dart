@@ -38,6 +38,7 @@ class MarketplaceScreen extends StatelessWidget {
                         style: GoogleFonts.montserrat().copyWith(
                           fontSize: 26,
                           fontWeight: FontWeight.w600,
+                          color: Colors.white,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -51,6 +52,7 @@ class MarketplaceScreen extends StatelessWidget {
                         "Build with reusablility, decoupled code, feature-first approach, easy to use and customize.",
                         style: GoogleFonts.montserrat().copyWith(
                           fontSize: 16,
+                          color: Colors.white,
                         ),
                         textAlign: TextAlign.center,
                       ),

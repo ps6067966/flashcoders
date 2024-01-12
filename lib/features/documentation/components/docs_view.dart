@@ -19,6 +19,7 @@ class DocsView extends StatelessWidget {
               .first;
           return HtmlWidget(
             data.htmlView ?? "",
+            textStyle: const TextStyle(color: Colors.white),
           );
         }),
       ),

@@ -17,10 +17,10 @@ class AppTheme {
         surfaceTintColor: Colors.white,
       ),
       appBarTheme: const AppBarTheme(
-        backgroundColor: AppColors.scaffoldBackgroundColor,
+        backgroundColor: AppColors.scaffoldNewBackgroundColor,
       ),
       textTheme: GoogleFonts.robotoFlexTextTheme(),
-      scaffoldBackgroundColor: AppColors.scaffoldBackgroundColor,
+      scaffoldBackgroundColor: AppColors.scaffoldNewBackgroundColor,
       pageTransitionsTheme: PageTransitionsTheme(
         builders: kIsWeb
             ? {

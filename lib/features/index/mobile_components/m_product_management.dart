@@ -20,6 +20,7 @@ class MProductManagementImage extends StatelessWidget {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w600,
+            color: Colors.white,
           ),
           textAlign: TextAlign.center,
         ),
@@ -31,6 +32,7 @@ class MProductManagementImage extends StatelessWidget {
           style: TextStyle(
             fontSize: 18,
             fontWeight: FontWeight.normal,
+            color: Colors.white,
           ),
           textAlign: TextAlign.center,
         ),

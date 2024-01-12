@@ -28,24 +28,26 @@ class MMarketplaceScreen extends StatelessWidget {
                 children: [
                   SizedBox(
                     child: Text(
-                      "Don't start from scratch, Customize our apps to your needs to save time and money.",
+                      "Don't start from scratch!!!",
                       style: GoogleFonts.montserrat().copyWith(
-                        fontSize: 14,
+                        fontSize: 15,
                         fontWeight: FontWeight.w600,
+                        color: Colors.white,
                       ),
                       textAlign: TextAlign.center,
                     ),
                   ),
                   const SizedBox(
-                    height: 8,
+                    height: 16,
                   ),
                   SizedBox(
                     child: Text(
-                      "Build with reusablility, decoupled code, feature-first approach, easy to use and customize.",
+                      "Customize our apps to your needs to save time and money. Build with reusablility, decoupled code, feature-first approach, easy to use and customize.",
                       style: GoogleFonts.montserrat().copyWith(
-                        fontSize: 14,
+                        fontSize: 12,
+                        color: Colors.white,
                       ),
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.left,
                     ),
                   ),
                   const SizedBox(
@@ -106,7 +108,7 @@ class MMarketplaceScreen extends StatelessWidget {
                                       Text(
                                         data.title ?? "",
                                         style: const TextStyle(
-                                          fontSize: 16,
+                                          fontSize: 14,
                                           fontWeight: FontWeight.w700,
                                         ),
                                       ),
@@ -116,7 +118,7 @@ class MMarketplaceScreen extends StatelessWidget {
                                       Text(
                                         "Price: " "₹${data.price ?? ""}",
                                         style: const TextStyle(
-                                          fontSize: 16,
+                                          fontSize: 14,
                                         ),
                                       ),
                                     ],

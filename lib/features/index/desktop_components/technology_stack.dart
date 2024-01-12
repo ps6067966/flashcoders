@@ -64,6 +64,7 @@ class TechnologyStack extends StatelessWidget {
                   fontSize: 30,
                   letterSpacing: 1.2,
                   fontWeight: FontWeight.w500,
+                  color: Colors.white,
                 ),
               ),
             ],

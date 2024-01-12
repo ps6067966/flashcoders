@@ -19,13 +19,15 @@ class XMobileAppBar extends StatelessWidget implements PreferredSizeWidget {
           onTap: () {
             Scaffold.of(context).openEndDrawer();
           },
-          child: Icon(Icons.menu,
-              color: GoRouterState.of(context)
-                      .uri
-                      .toString()
-                      .contains("flutter-institute")
-                  ? Colors.white
-                  : Colors.black),
+          child: Icon(
+            Icons.menu,
+            color: GoRouterState.of(context)
+                    .uri
+                    .toString()
+                    .contains("flutter-institute")
+                ? Colors.white
+                : Colors.white,
+          ),
         ),
         const SizedBox(width: 20),
       ],

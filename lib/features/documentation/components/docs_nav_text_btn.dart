@@ -19,7 +19,7 @@ class DocsNavTextButton extends StatelessWidget {
           color:
               GoRouterState.of(context).uri.toString().contains("flutter-institute")
                   ? Colors.white
-                  : Colors.black,
+                  : Colors.white,
         ),
       ),
     );

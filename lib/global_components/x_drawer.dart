@@ -17,7 +17,7 @@ class XDrawer extends StatelessWidget {
       backgroundColor:
           GoRouterState.of(context).uri.toString().contains("flutter-institute")
               ? AppColors.primaryBlackColor
-              : Colors.white,
+              : Colors.black,
       child: Padding(
         padding: const EdgeInsets.only(left: 24.0),
         child: Column(

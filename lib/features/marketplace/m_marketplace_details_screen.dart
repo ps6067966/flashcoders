@@ -99,19 +99,11 @@ class _MMarketplaceDetailsScreenState extends State<MMarketplaceDetailsScreen> {
                               style: const TextStyle(
                                 fontSize: 24,
                                 fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                             const SizedBox(
-                              height: 24,
-                            ),
-                            Html(
-                              data: product?.description ?? "",
-                              onLinkTap: (url, context, attributes, element) {
-                                launchUrl(Uri.parse(url ?? ""));
-                              },
-                            ),
-                            const SizedBox(
-                              width: 30,
+                              height: 16,
                             ),
                             Card(
                               color: Colors.white,
@@ -122,11 +114,12 @@ class _MMarketplaceDetailsScreenState extends State<MMarketplaceDetailsScreen> {
                                   mainAxisSize: MainAxisSize.min,
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Text(
-                                      product?.title ?? "",
-                                      style: const TextStyle(
-                                        fontSize: 20,
-                                      ),
+                                    Html(
+                                      data: product?.description ?? "",
+                                      onLinkTap:
+                                          (url, context, attributes, element) {
+                                        launchUrl(Uri.parse(url ?? ""));
+                                      },
                                     ),
                                     const SizedBox(
                                       height: 8,

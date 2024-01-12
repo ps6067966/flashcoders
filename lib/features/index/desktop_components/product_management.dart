@@ -23,6 +23,7 @@ class ProductManagementImage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 28,
                 fontWeight: FontWeight.w600,
+                color: Colors.white,
               ),
             ),
           ],
@@ -38,6 +39,7 @@ class ProductManagementImage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.normal,
+                color: Colors.white,
               ),
             ),
           ],

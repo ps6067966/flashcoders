@@ -56,9 +56,10 @@ class MTechnologyStack extends StatelessWidget {
         const Text(
           IndexText.technologydStackHeading,
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 16,
             letterSpacing: 1.2,
             fontWeight: FontWeight.w500,
+            color: Colors.white,
           ),
           textAlign: TextAlign.center,
         ),

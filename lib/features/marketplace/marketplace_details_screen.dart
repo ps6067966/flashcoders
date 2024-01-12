@@ -62,17 +62,21 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                                       style: const TextStyle(
                                         fontSize: 24,
                                         fontWeight: FontWeight.bold,
+                                        color: Colors.white,
                                       ),
                                     ),
                                     const SizedBox(
-                                      height: 24,
+                                      height: 8,
                                     ),
-                                    Html(
-                                      data: product?.description ?? "",
-                                      onLinkTap:
-                                          (url, context, attributes, element) {
-                                        launchUrl(Uri.parse(url ?? ""));
-                                      },
+                                    Card(
+                                      color: Colors.white,
+                                      child: Html(
+                                        data: product?.description ?? "",
+                                        onLinkTap: (url, context, attributes,
+                                            element) {
+                                          launchUrl(Uri.parse(url ?? ""));
+                                        },
+                                      ),
                                     ),
                                   ],
                                 ),

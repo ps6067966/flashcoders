@@ -21,7 +21,7 @@ class BlogNavTextButton extends StatelessWidget {
                   .toString()
                   .contains("flutter-institute")
               ? Colors.white
-              : Colors.black,
+              : Colors.white,
         ),
       ),
     );

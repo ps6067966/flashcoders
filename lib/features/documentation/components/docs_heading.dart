@@ -13,12 +13,13 @@ class DocsHeading extends StatelessWidget {
       itemBuilder: (context, index) {
         final data = DocsData.headingData[index];
         return ExpansionTile(
-            title: Text(
-              data.title ?? "",
-            ),
-            children:
-                data.subHeadings?.map((e) => DocsSubHeading(e: e)).toList() ??
-                    []);
+          title: Text(
+            data.title ?? "",
+            style: const TextStyle(color: Colors.white),
+          ),
+          children:
+              data.subHeadings?.map((e) => DocsSubHeading(e: e)).toList() ?? [],
+        );
       },
     );
   }

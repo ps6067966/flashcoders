@@ -31,7 +31,7 @@ class LogoWithText extends StatelessWidget {
                       .toString()
                       .contains("flutter-institute")
                   ? Colors.white
-                  : Colors.black,
+                  : Colors.white,
               fontSize: 16,
             ),
           ),
