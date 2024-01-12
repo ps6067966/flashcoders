@@ -1,4 +1,3 @@
-import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -11,7 +10,7 @@ class XFloatingActionButton extends StatelessWidget {
       onPressed: () {
         launchUrl(Uri.parse("https://wa.me/+918058301863"));
       },
-      backgroundColor: AppColors.primaryBlackColor,
+      backgroundColor: Colors.white,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child:
