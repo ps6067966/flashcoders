@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flashcoders/credentials.dart';
 import 'package:flashcoders/features/auth/auth_router.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -6,13 +6,11 @@ import 'package:go_router/go_router.dart';
 import '../../../theme/app_colors.dart';
 
 class SignInButton extends StatelessWidget {
-  SignInButton({super.key});
-
-  final FirebaseAuth auth = FirebaseAuth.instance;
+  const SignInButton({super.key});
 
   @override
   Widget build(BuildContext context) {
-    if (auth.currentUser != null) {
+    if (supabase.auth.currentUser != null) {
       return PopupMenuButton(
         position: PopupMenuPosition.under,
         offset: const Offset(0, 30),
@@ -21,7 +19,7 @@ class SignInButton extends StatelessWidget {
             PopupMenuItem(
               child: TextButton(
                 onPressed: () {
-                  auth.signOut();
+                  supabase.auth.signOut();
                   context.pushReplacement(AuthPath.auth);
                 },
                 child: const Text("Sign out"),
@@ -33,24 +31,30 @@ class SignInButton extends StatelessWidget {
           width: 35,
           height: 35,
           decoration: BoxDecoration(
-              image: DecorationImage(
-                image: NetworkImage(auth.currentUser!.photoURL!),
-                fit: BoxFit.cover,
-              ),
-              shape: BoxShape.circle),
+            image: DecorationImage(
+              image: NetworkImage(
+                  supabase.auth.currentUser!.userMetadata?['avatar_url'] ?? ""),
+              fit: BoxFit.cover,
+            ),
+            shape: BoxShape.circle,
+          ),
         ),
       );
     }
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        foregroundColor:
-            GoRouterState.of(context).uri.toString().contains("flutter-institute")
-                ? AppColors.primaryBlackColor
-                : Colors.white,
-        backgroundColor:
-            GoRouterState.of(context).uri.toString().contains("flutter-institute")
-                ? Colors.white
-                : AppColors.primaryBlackColor,
+        foregroundColor: GoRouterState.of(context)
+                .uri
+                .toString()
+                .contains("flutter-institute")
+            ? AppColors.primaryBlackColor
+            : Colors.white,
+        backgroundColor: GoRouterState.of(context)
+                .uri
+                .toString()
+                .contains("flutter-institute")
+            ? Colors.white
+            : AppColors.primaryBlackColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),

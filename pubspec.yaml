@@ -38,18 +38,25 @@ dependencies:
 
   #h
   html_viewer_elite: ^0.0.4
+  http: ^1.1.2
 
   #i
   image_picker: ^1.0.7
 
+  #l
+  lottie: ^2.7.0
+  
+  #q
   quill_html_editor: ^2.2.7
 
   #r
   responsive_framework: ^1.1.1
+
+  #s
+  supabase_flutter: ^2.2.0
+  
   #u
   url_launcher: ^6.2.3
-  http: ^1.1.2
-  lottie: ^2.7.0
 
 dev_dependencies:
   flutter_test:

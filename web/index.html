@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--
+
+<head>
+  <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
 
@@ -14,118 +15,126 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-    <base href="$FLUTTER_BASE_HREF" />
+  <base href="$FLUTTER_BASE_HREF" />
 
-    <meta charset="UTF-8" />
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta
-      name="description"
-      content="Flash Coders company's vision is to create technology that empowers people to live better lives and make the world a better place, while also being mindful of the potential negative impacts of technology and working to mitigate them, and to do so in a way that is equitable, inclusive, sustainable, future-proof, and aligned with the UN Sustainable Development Goals, and that leaves a positive legacy for future generations."
-    />
+  <meta charset="UTF-8" />
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+  <meta name="description"
+    content="Flash Coders company's vision is to create technology that empowers people to live better lives and make the world a better place, while also being mindful of the potential negative impacts of technology and working to mitigate them, and to do so in a way that is equitable, inclusive, sustainable, future-proof, and aligned with the UN Sustainable Development Goals, and that leaves a positive legacy for future generations." />
 
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="flashcoders" />
-    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="flashcoders" />
+  <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
 
-    <title>Flash Coders</title>
-    <link rel="manifest" href="manifest.json" />
+  <title>Flash Coders</title>
+  <link rel="manifest" href="manifest.json" />
 
-    <script>
-      // The value below is injected by flutter build, do not touch.
-      var serviceWorkerVersion = null;
-    </script>
-    <!-- This script adds the flutter initialization JS code -->
-    <script src="flutter.js" defer></script>
-  </head>
-  <body>
-    <!-- Loading Indicator -->
-    <div id="loading">
-      <style>
-        body {
-          inset: 0;
-          overflow: hidden;
-          margin: 0;
-          padding: 0;
-          position: fixed;
-        }
-        #loading {
-          align-items: center;
-          display: flex;
-          height: 100%;
-          justify-content: center;
-          width: 100%;
-        }
-        #loading img {
-          animation: 1s ease-in-out 0s infinite alternate breathe;
-          opacity: 0.66;
-          transition: opacity 0.4s;
-        }
-        #loading.main_done img {
-          opacity: 1;
-        }
-        #loading.init_done img {
-          animation: 0.33s ease-in-out 0s 1 forwards zooooom;
-          opacity: 0.05;
-        }
-        @keyframes breathe {
-          from {
-            transform: scale(1);
-          }
-          to {
-            transform: scale(0.95);
-          }
-        }
-        @keyframes zooooom {
-          from {
-            transform: scale(1);
-          }
-          to {
-            transform: scale(0.01);
-          }
-        }
-      </style>
-      <img src="flash_coders_bg.png" height="200" width="200" />
-    </div>
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = null;
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
 
-    <script>
-      const regExp = new RegExp(
-        "bot|google|baidu|bing|msn|teoma|slurp|yandex",
-        "i"
-      );
-      if (regExp.test(navigator.userAgent)) {
-        window.flutterWebRenderer = "html";
+<body style="color: black;">
+  <!-- Loading Indicator -->
+  <div id="loading">
+    <style>
+      body {
+        inset: 0;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+        position: fixed;
       }
-    </script>
 
-    <script>
-      window.addEventListener("load", function (ev) {
-        var loading = document.querySelector("#loading");
-        // Download main.dart.js
-        _flutter.loader.loadEntrypoint({
-          serviceWorker: {
-            serviceWorkerVersion: serviceWorkerVersion,
-          },
-          onEntrypointLoaded: function (engineInitializer) {
-            loading.classList.add("main_done");
-            engineInitializer
-              .initializeEngine()
-              .then(function (appRunner) {
-                loading.classList.add("init_done");
-                appRunner.runApp();
-              })
-              .then(function (app) {
-                window.setTimeout(function () {
-                  loading.remove();
-                }, 200);
-              });
-          },
-        });
+      #loading {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+      }
+
+      #loading img {
+        animation: 1s ease-in-out 0s infinite alternate breathe;
+        opacity: 0.66;
+        transition: opacity 0.4s;
+      }
+
+      #loading.main_done img {
+        opacity: 1;
+      }
+
+      #loading.init_done img {
+        animation: 0.33s ease-in-out 0s 1 forwards zooooom;
+        opacity: 0.05;
+      }
+
+      @keyframes breathe {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(0.95);
+        }
+      }
+
+      @keyframes zooooom {
+        from {
+          transform: scale(1);
+        }
+
+        to {
+          transform: scale(0.01);
+        }
+      }
+    </style>
+    <img src="flash_coders_bg.png" height="200" width="200" />
+  </div>
+
+  <script>
+    const regExp = new RegExp(
+      "bot|google|baidu|bing|msn|teoma|slurp|yandex",
+      "i"
+    );
+    if (regExp.test(navigator.userAgent)) {
+      window.flutterWebRenderer = "html";
+    }
+  </script>
+
+  <script>
+    window.addEventListener("load", function (ev) {
+      var loading = document.querySelector("#loading");
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          loading.classList.add("main_done");
+          engineInitializer
+            .initializeEngine()
+            .then(function (appRunner) {
+              loading.classList.add("init_done");
+              appRunner.runApp();
+            })
+            .then(function (app) {
+              window.setTimeout(function () {
+                loading.remove();
+              }, 200);
+            });
+        },
       });
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
 </html>
