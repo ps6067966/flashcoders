@@ -12,20 +12,20 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
-        const AdminPanelNavTextButton(),
-        const FlutterInstituteNavTextButton(),
-        const MarketplaceNavTextButton(),
-        const SizedBox(
+        AdminPanelNavTextButton(),
+        FlutterInstituteNavTextButton(),
+        MarketplaceNavTextButton(),
+        SizedBox(
           width: 24,
         ),
-        const DocsNavTextButton(),
-        const SizedBox(
+        DocsNavTextButton(),
+        SizedBox(
           width: 24,
         ),
-        const BlogNavTextButton(),
-        const SizedBox(
+        BlogNavTextButton(),
+        SizedBox(
           width: 24,
         ),
         SignInButton(),
