@@ -1,4 +1,4 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flashcoders/credentials.dart';
 import 'package:flashcoders/features/blog/blog_router.dart';
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flashcoders/global_components/footer/footer.dart';
@@ -46,7 +46,7 @@ class BlogScreen extends StatelessWidget {
                             ),
                           ),
                           onPressed: () {
-                            if (FirebaseAuth.instance.currentUser == null) {
+                            if (supabase.auth.currentUser == null) {
                               showCupertinoModalPopup(
                                 context: context,
                                 builder: (context) {
@@ -100,7 +100,7 @@ class BlogScreen extends StatelessWidget {
                           crossAxisCount: 4,
                           crossAxisSpacing: 20,
                           mainAxisSpacing: 20,
-                          mainAxisExtent: 260,
+                          mainAxisExtent: 280,
                         ),
                         shrinkWrap: true,
                         itemBuilder: (context, index) {

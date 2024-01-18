@@ -29,7 +29,10 @@ class XExtendedImage extends StatelessWidget {
       loadStateChanged: (state) {
         switch (state.extendedImageLoadState) {
           case LoadState.loading:
-            return const Center(child: CircularProgressIndicator());
+            return const Center(
+                child: CircularProgressIndicator(
+              backgroundColor: Colors.white,
+            ));
           case LoadState.completed:
             return ExtendedRawImage(
               image: state.extendedImageInfo?.image,

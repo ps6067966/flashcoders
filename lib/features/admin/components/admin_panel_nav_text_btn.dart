@@ -1,7 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flashcoders/credentials.dart';
 import 'package:flashcoders/features/admin/admin_panel_router.dart';
-import 'package:flashcoders/global/collections.dart';
-import 'package:flashcoders/global/model/user_model.dart';
+import 'package:flashcoders/features/admin/components/admin_api.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,9 +9,9 @@ class AdminPanelNavTextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FirebaseAuth.instance.currentUser != null
+    return supabase.auth.currentUser != null
         ? FutureBuilder(
-            future: currentUserSnapshot,
+            future: AdminApi.getCurrentUserData(),
             builder: (context, snapshot) {
               if (snapshot.hasError) {
                 return const SizedBox();
@@ -20,11 +19,10 @@ class AdminPanelNavTextButton extends StatelessWidget {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const SizedBox();
               }
-              if (snapshot.data == null || snapshot.data?.data() == null) {
+              if (snapshot.data == null) {
                 return const SizedBox();
               }
-              final currentUser = UserModel.fromMap(snapshot.data!.data()!);
-              if (!(currentUser.isAdmin ?? false)) {
+              if (!(snapshot.data?.isAdmin ?? false)) {
                 return const SizedBox();
               }
               return Row(

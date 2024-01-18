@@ -6,8 +6,8 @@ class BlogModel {
   final String? name;
   final String? email;
   final String? photoUrl;
-  final Timestamp? createdAt;
-  final Timestamp? updatedAt;
+  final String? createdAt;
+  final String? updatedAt;
   final String? post;
   final String? image;
   final String? title;

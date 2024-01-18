@@ -38,12 +38,12 @@ class _CreateBlogScreenState extends State<CreateBlogScreen> {
     ToolBarStyle.editTable,
   ];
 
-  final _toolbarColor = Colors.grey.shade200;
+  final _toolbarColor = AppColors.scaffoldNewBackgroundColor;
   final _backgroundColor = Colors.white70;
-  final _toolbarIconColor = Colors.black87;
+  final _toolbarIconColor = Colors.white;
   final _editorTextStyle = const TextStyle(
       fontSize: 18,
-      color: Colors.black,
+      color: Colors.white,
       fontWeight: FontWeight.normal,
       fontFamily: 'Roboto');
   final _hintTextStyle = const TextStyle(
@@ -87,8 +87,14 @@ class _CreateBlogScreenState extends State<CreateBlogScreen> {
                   width: 600,
                   child: TextFormField(
                     controller: _titleController,
+                    style: const TextStyle(
+                      color: Colors.white,
+                    ),
                     decoration: const InputDecoration(
                       hintText: "Blog Title",
+                      hintStyle: TextStyle(
+                        color: Colors.white,
+                      ),
                       border: OutlineInputBorder(),
                     ),
                   ),
@@ -158,10 +164,11 @@ class _CreateBlogScreenState extends State<CreateBlogScreen> {
                           hintTextAlign: TextAlign.start,
                           padding: const EdgeInsets.only(left: 10, top: 10),
                           hintTextPadding: const EdgeInsets.only(left: 20),
-                          backgroundColor: _backgroundColor,
+                          backgroundColor: AppColors.scaffoldNewBackgroundColor,
                           loadingBuilder: (context) {
                             return const Center(
                                 child: CircularProgressIndicator(
+                              backgroundColor: Colors.white,
                               strokeWidth: 0.4,
                             ));
                           },

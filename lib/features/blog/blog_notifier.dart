@@ -1,4 +1,4 @@
-import 'package:flashcoders/features/blog/blog_collection.dart';
+import 'package:flashcoders/credentials.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import 'blog_model.dart';
@@ -10,10 +10,13 @@ final blogNotifierProvider =
 
 class BlogNotifier extends AsyncNotifier<List<BlogModel>> {
   List<BlogModel> blogModel = [];
-  
+
   getBlogs() async {
-    final data = await blogCollection.orderBy("id", descending: true).get();
-    blogModel = data.docs.map((e) => BlogModel.fromMap(e.data())).toList();
+    final data = await supabase.rest.from("blogs").select().order(
+          "id",
+          ascending: false,
+        );
+    blogModel = data.map((e) => BlogModel.fromMap(e)).toList();
     state = AsyncData(blogModel);
   }
 

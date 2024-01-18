@@ -219,6 +219,7 @@ class _MCreateBlogScreenState extends State<MCreateBlogScreen> {
                       loadingBuilder: (context) {
                         return const Center(
                             child: CircularProgressIndicator(
+                          backgroundColor: Colors.white,
                           strokeWidth: 0.4,
                         ));
                       },

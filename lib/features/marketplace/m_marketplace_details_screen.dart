@@ -81,6 +81,7 @@ class _MMarketplaceDetailsScreenState extends State<MMarketplaceDetailsScreen> {
                         if (product?.imageUrl == null) {
                           return const Center(
                             child: CircularProgressIndicator(
+                              backgroundColor: Colors.white,
                               strokeWidth: 2,
                             ),
                           );

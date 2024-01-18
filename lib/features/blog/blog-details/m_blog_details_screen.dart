@@ -31,6 +31,7 @@ class MBlogDetailsScreen extends StatelessWidget {
                       if (blog?.image == null) {
                         return const Center(
                           child: CircularProgressIndicator(
+                            backgroundColor: Colors.white,
                             strokeWidth: 2,
                           ),
                         );

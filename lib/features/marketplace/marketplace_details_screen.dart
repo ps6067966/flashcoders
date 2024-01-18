@@ -38,6 +38,7 @@ class MarketplaceDetailsScreen extends StatelessWidget {
                           if (product?.imageUrl == null) {
                             return const Center(
                               child: CircularProgressIndicator(
+                                backgroundColor: Colors.white,
                                 strokeWidth: 2,
                               ),
                             );

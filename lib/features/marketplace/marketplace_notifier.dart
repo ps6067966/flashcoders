@@ -1,4 +1,4 @@
-import 'package:flashcoders/features/marketplace/marketplace_collection.dart';
+import 'package:flashcoders/credentials.dart';
 import 'package:flashcoders/features/marketplace/marketplace_model.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -12,10 +12,12 @@ class MarketplaceNotifer extends AsyncNotifier<List<MarketplaceModel>> {
 
   getMarketplaceData() async {
     state = const AsyncValue.loading();
-    final snapshot =
-        await marketplaceCollection.orderBy("id", descending: true).get();
+    final snapshot = await supabase.rest.from("marketplace").select().order(
+          "id",
+          ascending: false,
+        );
     final marketplaceData =
-        snapshot.docs.map((e) => MarketplaceModel.fromMap(e.data())).toList();
+        snapshot.map((e) => MarketplaceModel.fromMap(e)).toList();
     state = AsyncData(marketplaceData);
   }
 
