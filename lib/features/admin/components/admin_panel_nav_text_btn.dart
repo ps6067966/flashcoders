@@ -1,6 +1,7 @@
 import 'package:flashcoders/credentials.dart';
 import 'package:flashcoders/features/admin/admin_panel_router.dart';
 import 'package:flashcoders/features/admin/components/admin_api.dart';
+import 'package:flashcoders/global/model/user_model.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,18 +11,9 @@ class AdminPanelNavTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return supabase.auth.currentUser != null
-        ? FutureBuilder(
+        ? FutureBuilder<UserModel?>(
             future: AdminApi.getCurrentUserData(),
             builder: (context, snapshot) {
-              if (snapshot.hasError) {
-                return const SizedBox();
-              }
-              if (snapshot.connectionState == ConnectionState.waiting) {
-                return const SizedBox();
-              }
-              if (snapshot.data == null) {
-                return const SizedBox();
-              }
               if (!(snapshot.data?.isAdmin ?? false)) {
                 return const SizedBox();
               }
