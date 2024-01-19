@@ -4,7 +4,7 @@ description: Flash Coders company's vision is to create technology that empowers
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.2.2 <4.0.0"
+  sdk: ">=3.2.5 <4.0.0"
 
 dependencies:
   #sdk
@@ -38,13 +38,9 @@ dependencies:
 
   #h
   html_viewer_elite: ^0.0.4
-  http: ^1.1.2
 
   #i
   image_picker: ^1.0.7
-
-  #l
-  lottie: ^2.7.0
   
   #q
   quill_html_editor: ^2.2.7
@@ -53,7 +49,7 @@ dependencies:
   responsive_framework: ^1.1.1
 
   #s
-  supabase_flutter: ^2.2.0
+  supabase_flutter: ^2.3.0
   
   #u
   url_launcher: ^6.2.3
