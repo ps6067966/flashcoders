@@ -30,8 +30,7 @@ class _PortfolioExperienceState extends State<PortfolioExperience> {
       fromDate: "Jan 2022",
       toDate: "Feb 2023",
       position: "Flutter Developer",
-      description:
-          """Learnt Feature-first approach and why it is better than layer first approach. \nRiverpod Async Notifier, how to manage state using riverpod's most recommended approach.\nIntegration of Getstream chat, Insta like image picker etc.\nLearned how to architect apps and web for responsiveness.\nOther than that, the first time i tried panda CSS and Serverpod.""",
+      description: """Two Web-Apps""",
     ),
     ExperienceModel(
       companyName: "INDIA WEBLAB TECHNOLOGIES PRIVATE LIMITED",
@@ -39,7 +38,7 @@ class _PortfolioExperienceState extends State<PortfolioExperience> {
       toDate: "Feb 2021",
       position: "Software Developer",
       description:
-          """Learnt Feature-first approach and why it is better than layer first approach. \nRiverpod Async Notifier, how to manage state using riverpod's most recommended approach.\nIntegration of Getstream chat, Insta like image picker etc.\nLearned how to architect apps and web for responsiveness.\nOther than that, the first time i tried panda CSS and Serverpod.""",
+          """Used C# to work on ERP software.\nWorked on window forms for UI designing.\nAzure DevOps.\nWorked on backend SQL Server - stored procedures, fetching data through API, updating, deleting data, and importance of where clause in update and delete.\nLearning from the best authors/developers around the world on pluralsight.com and oreilly.com """,
     ),
   ];
   @override

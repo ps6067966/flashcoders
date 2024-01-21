@@ -1,5 +1,7 @@
 import 'package:flashcoders/features/portfolio/component/about_me.dart';
 import 'package:flashcoders/features/portfolio/component/experience.dart';
+import 'package:flashcoders/features/portfolio/component/past_works.dart';
+import 'package:flashcoders/features/portfolio/component/services.dart';
 import 'package:flashcoders/features/portfolio/component/top_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -44,6 +46,7 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
             SizedBox(
               height: 16,
             ),
+            PastWorks(),
           ],
         );
       case "Services":
@@ -54,6 +57,7 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
             SizedBox(
               height: 16,
             ),
+            PostfolioServices(),
           ],
         );
       default:

@@ -69,10 +69,11 @@ My experience with Flutter has been formed by my constant commitment to producin
                   children: [
                     CircleAvatar(
                       radius: 11,
+                      backgroundColor: Colors.white,
                       child: Center(
                         child: Icon(
                           Icons.done_outline_sharp,
-                          color: Colors.orangeAccent,
+                          color: Colors.orange,
                           size: 13,
                         ),
                       ),
@@ -95,10 +96,11 @@ My experience with Flutter has been formed by my constant commitment to producin
                   children: [
                     CircleAvatar(
                       radius: 11,
+                      backgroundColor: Colors.white,
                       child: Center(
                         child: Icon(
                           Icons.done_outline_sharp,
-                          color: Colors.orangeAccent,
+                          color: Colors.orange,
                           size: 13,
                         ),
                       ),
@@ -121,10 +123,11 @@ My experience with Flutter has been formed by my constant commitment to producin
                   children: [
                     CircleAvatar(
                       radius: 11,
+                      backgroundColor: Colors.white,
                       child: Center(
                         child: Icon(
                           Icons.done_outline_sharp,
-                          color: Colors.orangeAccent,
+                          color: Colors.orange,
                           size: 13,
                         ),
                       ),
@@ -147,10 +150,11 @@ My experience with Flutter has been formed by my constant commitment to producin
                   children: [
                     CircleAvatar(
                       radius: 11,
+                      backgroundColor: Colors.white,
                       child: Center(
                         child: Icon(
                           Icons.done_outline_sharp,
-                          color: Colors.orangeAccent,
+                          color: Colors.orange,
                           size: 13,
                         ),
                       ),
@@ -175,10 +179,11 @@ My experience with Flutter has been formed by my constant commitment to producin
                   children: [
                     CircleAvatar(
                       radius: 11,
+                      backgroundColor: Colors.white,
                       child: Center(
                         child: Icon(
                           Icons.done_outline_sharp,
-                          color: Colors.orangeAccent,
+                          color: Colors.orange,
                           size: 13,
                         ),
                       ),
