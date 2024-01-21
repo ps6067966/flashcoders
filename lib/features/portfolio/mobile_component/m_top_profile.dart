@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class TopProfile extends StatefulWidget {
-  const TopProfile({super.key});
+class MTopProfile extends StatefulWidget {
+  const MTopProfile({super.key});
 
   @override
-  State<TopProfile> createState() => _TopProfileState();
+  State<MTopProfile> createState() => _MTopProfileState();
 }
 
-class _TopProfileState extends State<TopProfile> {
+class _MTopProfileState extends State<MTopProfile> {
   bool showFullProfileData = false;
   @override
   Widget build(BuildContext context) {

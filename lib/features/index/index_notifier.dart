@@ -5,11 +5,7 @@ final indexNotifierProvider = AsyncNotifierProvider<IndexNotifier, void>(() {
 });
 
 class IndexNotifier extends AsyncNotifier<void> {
-
-  getCurrentUserData() {
-    
-
-  }
+  getCurrentUserData() {}
 
   @override
   void build() {

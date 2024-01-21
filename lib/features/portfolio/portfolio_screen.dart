@@ -1,8 +1,10 @@
-import 'package:flashcoders/features/portfolio/component/about_me.dart';
-import 'package:flashcoders/features/portfolio/component/experience.dart';
-import 'package:flashcoders/features/portfolio/component/past_works.dart';
-import 'package:flashcoders/features/portfolio/component/services.dart';
-import 'package:flashcoders/features/portfolio/component/top_profile.dart';
+import 'package:flashcoders/features/portfolio/desktop_component/about_me.dart';
+import 'package:flashcoders/features/portfolio/desktop_component/experience.dart';
+import 'package:flashcoders/features/portfolio/desktop_component/past_works.dart';
+import 'package:flashcoders/features/portfolio/desktop_component/services.dart';
+import 'package:flashcoders/features/portfolio/desktop_component/top_profile.dart';
+import 'package:flashcoders/features/portfolio/m_portfolio_screen.dart';
+import 'package:flashcoders/global_components/xresponsive_wrapper.dart';
 import 'package:flutter/material.dart';
 
 class PortfolioScreen extends StatefulWidget {
@@ -17,15 +19,18 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
   Widget getBody() {
     switch (selectedMenu) {
       case "About":
-        return const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            TopProfile(),
-            SizedBox(
-              height: 16,
-            ),
-            AboutMe(),
-          ],
+        return const Padding(
+          padding: EdgeInsets.all(50.0),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              TopProfile(),
+              SizedBox(
+                width: 16,
+              ),
+              Expanded(child: AboutMe()),
+            ],
+          ),
         );
       case "Experience":
         return const Column(
@@ -69,104 +74,16 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xff121212),
-      bottomNavigationBar: ClipRRect(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(30),
-          topRight: Radius.circular(30),
-        ),
-        child: Container(
-            height: 70,
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(30),
-                topRight: Radius.circular(30),
-              ),
-              color: Color(0xff282829),
-            ),
+    return XResponsiveWrapper(
+      mobile: const MPortfolioScreen(),
+      desktop: Scaffold(
+        backgroundColor: const Color(0xff121212),
+        body: SafeArea(
+          child: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      if (context.mounted) {
-                        setState(() {
-                          selectedMenu = "About";
-                        });
-                      }
-                    },
-                    child: Text(
-                      "About",
-                      style: TextStyle(
-                        color: selectedMenu == "About"
-                            ? Colors.orange
-                            : Colors.white,
-                      ),
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      if (context.mounted) {
-                        setState(() {
-                          selectedMenu = "Experience";
-                        });
-                      }
-                    },
-                    child: Text(
-                      "Experience",
-                      style: TextStyle(
-                        color: selectedMenu == "Experience"
-                            ? Colors.orange
-                            : Colors.white,
-                      ),
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      if (context.mounted) {
-                        setState(() {
-                          selectedMenu = "Portfolio";
-                        });
-                      }
-                    },
-                    child: Text(
-                      "Portfolio",
-                      style: TextStyle(
-                        color: selectedMenu == "Portfolio"
-                            ? Colors.orange
-                            : Colors.white,
-                      ),
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      if (context.mounted) {
-                        setState(() {
-                          selectedMenu = "Services";
-                        });
-                      }
-                    },
-                    child: Text(
-                      "Services",
-                      style: TextStyle(
-                        color: selectedMenu == "Services"
-                            ? Colors.orange
-                            : Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            )),
-      ),
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: getBody(),
+              padding: const EdgeInsets.all(16.0),
+              child: getBody(),
+            ),
           ),
         ),
       ),
