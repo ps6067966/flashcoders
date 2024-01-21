@@ -1,7 +1,7 @@
-import 'package:flashcoders/features/portfolio/desktop_component/past_works.dart';
-import 'package:flashcoders/features/portfolio/desktop_component/services.dart';
 import 'package:flashcoders/features/portfolio/mobile_component/m_about_me.dart';
 import 'package:flashcoders/features/portfolio/mobile_component/m_experience.dart';
+import 'package:flashcoders/features/portfolio/mobile_component/m_past_works.dart';
+import 'package:flashcoders/features/portfolio/mobile_component/m_services.dart';
 import 'package:flashcoders/features/portfolio/mobile_component/m_top_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +46,7 @@ class _MPortfolioScreenState extends State<MPortfolioScreen> {
             SizedBox(
               height: 16,
             ),
-            PastWorks(),
+            MPastWorks(),
           ],
         );
       case "Services":
@@ -57,7 +57,7 @@ class _MPortfolioScreenState extends State<MPortfolioScreen> {
             SizedBox(
               height: 16,
             ),
-            PostfolioServices(),
+            MPortfolioServices(),
           ],
         );
       default:

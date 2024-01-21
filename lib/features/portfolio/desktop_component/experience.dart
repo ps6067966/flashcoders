@@ -1,4 +1,6 @@
+import 'package:flashcoders/features/portfolio/portfolio_notifier.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PortfolioExperience extends StatefulWidget {
   const PortfolioExperience({super.key});
@@ -54,86 +56,183 @@ class _PortfolioExperienceState extends State<PortfolioExperience> {
           color: Colors.white.withOpacity(0.1),
         ),
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              "Experience",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            const SizedBox(
-              width: 100,
-              child: Divider(
-                color: Colors.orangeAccent,
-                height: 8,
-                thickness: 2,
-              ),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            ListView.builder(
-              shrinkWrap: true,
-              itemCount: experienceList.length,
-              physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (context, index) {
-                final experience = experienceList[index];
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 30.0),
-                  child: Row(
-                    children: [
-                      const Icon(
-                        Icons.apartment,
-                        color: Colors.orangeAccent,
-                      ),
-                      const SizedBox(
-                        width: 16,
-                      ),
-                      Expanded(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "${experience.position} at ${experience.companyName}",
-                              style: const TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                            const SizedBox(
-                              height: 6,
-                            ),
-                            Text(
-                              "${experience.fromDate} - ${experience.toDate}",
-                              style:
-                                  const TextStyle(color: Colors.orangeAccent),
-                            ),
-                            const SizedBox(
-                              height: 6,
-                            ),
-                            Text(
-                              experience.description,
-                              style: const TextStyle(
-                                color: Colors.grey,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+      child: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Experience",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w700,
                   ),
-                );
-              },
+                ),
+                const SizedBox(
+                  width: 100,
+                  child: Divider(
+                    color: Colors.orangeAccent,
+                    height: 8,
+                    thickness: 2,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: experienceList.length,
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemBuilder: (context, index) {
+                    final experience = experienceList[index];
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 30.0),
+                      child: Row(
+                        children: [
+                          const Icon(
+                            Icons.apartment,
+                            color: Colors.orangeAccent,
+                          ),
+                          const SizedBox(
+                            width: 16,
+                          ),
+                          Expanded(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "${experience.position} at ${experience.companyName}",
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 6,
+                                ),
+                                Text(
+                                  "${experience.fromDate} - ${experience.toDate}",
+                                  style: const TextStyle(
+                                      color: Colors.orangeAccent),
+                                ),
+                                const SizedBox(
+                                  height: 6,
+                                ),
+                                Text(
+                                  experience.description,
+                                  style: const TextStyle(
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+          Positioned.fill(
+            child: Align(
+              alignment: Alignment.topRight,
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Color(0xff282829),
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(10),
+                    bottomLeft: Radius.circular(10),
+                  ),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Consumer(builder: (context, ref, child) {
+                    final selectedMenu =
+                        ref.watch(portfolioNotifierProvider).value;
+                    final refRead =
+                        ref.read(portfolioNotifierProvider.notifier);
+                    return Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        TextButton(
+                          onPressed: () {
+                            refRead.changeSelectedMenu("About");
+                          },
+                          child: Text(
+                            "About",
+                            style: TextStyle(
+                              color: selectedMenu == "About"
+                                  ? Colors.orange
+                                  : Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            refRead.changeSelectedMenu("Experience");
+                          },
+                          child: Text(
+                            "Experience",
+                            style: TextStyle(
+                              color: selectedMenu == "Experience"
+                                  ? Colors.orange
+                                  : Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            refRead.changeSelectedMenu("Portfolio");
+                          },
+                          child: Text(
+                            "Portfolio",
+                            style: TextStyle(
+                              color: selectedMenu == "Portfolio"
+                                  ? Colors.orange
+                                  : Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        TextButton(
+                          onPressed: () {
+                            refRead.changeSelectedMenu("Services");
+                          },
+                          child: Text(
+                            "Services",
+                            style: TextStyle(
+                              color: selectedMenu == "Services"
+                                  ? Colors.orange
+                                  : Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ],
+                    );
+                  }),
+                ),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
