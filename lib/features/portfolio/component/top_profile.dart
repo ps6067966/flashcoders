@@ -200,8 +200,8 @@ class _TopProfileState extends State<TopProfile> {
               child: Align(
             alignment: Alignment.topRight,
             child: Container(
-              width: 40,
-              height: 40,
+              width: 35,
+              height: 35,
               decoration: const BoxDecoration(
                 color: Color(0xff222224),
                 borderRadius: BorderRadius.only(

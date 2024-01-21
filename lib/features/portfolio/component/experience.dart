@@ -83,6 +83,7 @@ class _PortfolioExperienceState extends State<PortfolioExperience> {
             ListView.builder(
               shrinkWrap: true,
               itemCount: experienceList.length,
+              physics: const NeverScrollableScrollPhysics(),
               itemBuilder: (context, index) {
                 final experience = experienceList[index];
                 return Padding(
