@@ -8,13 +8,27 @@
       "name": "flashcoders",
       "request": "launch",
       "type": "dart",
-      "args": ["-d", "chrome", "--web-port", "5000", "--web-renderer", "html"]
+      "args": [
+        "-d",
+        "chrome",
+        "--web-port",
+        "5000",
+        "--web-renderer",
+        "html"
+      ]
     },
     {
       "name": "flashcoders (Edge)",
       "request": "launch",
       "type": "dart",
-      "args": ["-d", "edge", "--web-port", "5000", "--web-renderer", "html"]
+      "args": [
+        "-d",
+        "edge",
+        "--web-port",
+        "5000",
+        "--web-renderer",
+        "html"
+      ]
     },
     {
       "name": "flashcoders (profile mode)",

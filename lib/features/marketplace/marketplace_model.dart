@@ -1,5 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-
 class MarketplaceModel {
   final int? id;
   final String? title;
@@ -18,15 +16,6 @@ class MarketplaceModel {
     this.id,
     this.productType,
   });
-
-  MarketplaceModel.fromDocumentSnapshot(DocumentSnapshot documentSnapshot)
-      : id = documentSnapshot["id"],
-        title = documentSnapshot["title"],
-        price = documentSnapshot["price"],
-        imageUrl = documentSnapshot["image_url"],
-        link = documentSnapshot["link"],
-        productType = documentSnapshot["product_type"],
-        description = documentSnapshot["description"];
 
   MarketplaceModel.fromMap(Map<String, dynamic> map)
       : id = map["id"],
