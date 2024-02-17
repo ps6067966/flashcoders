@@ -30,6 +30,7 @@ dependencies:
   firebase_auth: ^4.17.4
   firebase_storage: ^11.6.5
   firebase_analytics: ^10.8.5
+  web: ^0.4.0
 
   #g
   go_router: ^13.2.0
