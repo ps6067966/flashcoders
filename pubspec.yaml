@@ -15,21 +15,21 @@ dependencies:
 
   #c
   cupertino_icons: ^1.0.6
-  cloud_firestore: ^4.15.5
+  cloud_firestore: ^4.15.6
 
   #e
   extended_image: ^8.2.0
 
   #f
   flutter_animate: ^4.5.0
-  firebase_core: ^2.25.4
+  firebase_core: ^2.25.5
   firebase_cached_image: ^0.5.3
   flutter_animated_button: ^2.0.3
   flutter_riverpod: ^2.4.10
   flutter_widget_from_html: ^0.14.11
-  firebase_auth: ^4.17.5
-  firebase_storage: ^11.6.6
-  firebase_analytics: ^10.8.6
+  firebase_auth: ^4.17.6
+  firebase_storage: ^11.6.7
+  firebase_analytics: ^10.8.7
   web: ^0.4.2
 
   #g
@@ -47,7 +47,7 @@ dependencies:
   quill_html_editor: ^2.2.7
 
   #r
-  responsive_framework: ^1.2.0
+  responsive_framework: ^1.4.0
 
   #s
   supabase_flutter: ^2.3.4

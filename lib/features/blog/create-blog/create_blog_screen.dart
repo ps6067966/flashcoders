@@ -39,7 +39,6 @@ class _CreateBlogScreenState extends State<CreateBlogScreen> {
   ];
 
   final _toolbarColor = AppColors.scaffoldNewBackgroundColor;
-  final _backgroundColor = Colors.white70;
   final _toolbarIconColor = Colors.white;
   final _editorTextStyle = const TextStyle(
       fontSize: 18,

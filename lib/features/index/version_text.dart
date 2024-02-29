@@ -9,7 +9,7 @@ class VersionText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Text(
-          "Version 1.2.5",
+          "Version 1.2.6",
           style: TextStyle(
             color: Colors.white,
           ),
