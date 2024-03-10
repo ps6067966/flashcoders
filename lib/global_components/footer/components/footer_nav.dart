@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../footer_notifier.dart';
 
@@ -22,10 +23,27 @@ class FooterNav extends StatelessWidget {
             padding: const EdgeInsets.all(10.0),
             child: InkWell(
               onTap: () {
-                if (footer?.name == "Contact") {}
+                if (footer?.name == "Contact us") {
+                  launchUrl(Uri.parse(
+                      "https://merchant.razorpay.com/policy/Nkaflo5JpZg1l1/contact_us"));
+                }
                 if (footer?.name == "FAQ") {}
-                if (footer?.name == "Terms & Conditions") {}
-                if (footer?.name == "Privacy Policy") {}
+                if (footer?.name == "Terms & Conditions") {
+                  launchUrl(Uri.parse(
+                      "https://merchant.razorpay.com/policy/Nkaflo5JpZg1l1/terms"));
+                }
+                if (footer?.name == "Privacy Policy") {
+                  launchUrl(Uri.parse(
+                      "https://merchant.razorpay.com/policy/Nkaflo5JpZg1l1/privacy"));
+                }
+                if (footer?.name == "Cancellation & Refund Policy") {
+                  launchUrl(Uri.parse(
+                      "https://merchant.razorpay.com/policy/Nkaflo5JpZg1l1/refund"));
+                }
+                if (footer?.name == "Shipping & Delivery Policy") {
+                  launchUrl(Uri.parse(
+                      "https://merchant.razorpay.com/policy/Nkaflo5JpZg1l1/shipping"));
+                }
               },
               onHover: (value) {
                 ref

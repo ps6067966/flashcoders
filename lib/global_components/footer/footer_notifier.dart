@@ -13,6 +13,8 @@ class FooterNotifer extends AsyncNotifier<List<FooterModel>> {
     FooterModel(name: "Contact us", isHovering: false),
     FooterModel(name: "Privacy Policy", isHovering: false),
     FooterModel(name: "Terms & Conditions", isHovering: false),
+    FooterModel(name: "Cancellation & Refund Policy", isHovering: false),
+    FooterModel(name: "Shipping & Delivery Policy", isHovering: false),
   ];
 
   updateHoveringStatus(index, value) {
