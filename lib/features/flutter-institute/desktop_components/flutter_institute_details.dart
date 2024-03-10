@@ -11,32 +11,32 @@ class FlutterInstituteDetails extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Text(
-              "In Partnership with  ",
-              style: TextStyle(
-                fontSize: 30,
-                color: Colors.white,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            InkWell(
-              onTap: () {
-                launchUrl(Uri.parse("https://www.oprezoindia.com/"));
-              },
-              child: const Text(
-                "Oprezo India Private Limited  ↗️",
-                style: TextStyle(
-                  fontSize: 30,
-                  color: AppColors.primaryColor,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
-        ),
+        // Row(
+        //   mainAxisAlignment: MainAxisAlignment.center,
+        //   children: [
+        //     const Text(
+        //       "In Partnership with  ",
+        //       style: TextStyle(
+        //         fontSize: 30,
+        //         color: Colors.white,
+        //       ),
+        //       textAlign: TextAlign.center,
+        //     ),
+        //     InkWell(
+        //       onTap: () {
+        //         launchUrl(Uri.parse("https://www.oprezoindia.com/"));
+        //       },
+        //       child: const Text(
+        //         "Oprezo India Private Limited  ↗️",
+        //         style: TextStyle(
+        //           fontSize: 30,
+        //           color: AppColors.primaryColor,
+        //         ),
+        //         textAlign: TextAlign.center,
+        //       ),
+        //     ),
+        //   ],
+        // ),
         const SizedBox(
           height: 10,
         ),
