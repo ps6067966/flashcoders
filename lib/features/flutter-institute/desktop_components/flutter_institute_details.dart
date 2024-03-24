@@ -1,7 +1,5 @@
 import 'package:flashcoders/features/flutter-institute/flutter_institute_assets.dart';
-import 'package:flashcoders/theme/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class FlutterInstituteDetails extends StatelessWidget {
   const FlutterInstituteDetails({super.key});
