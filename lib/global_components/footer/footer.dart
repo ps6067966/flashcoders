@@ -7,27 +7,30 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Divider(),
-        SizedBox(
-          height: 5,
-        ),
-        Row(
-          children: [
-            Expanded(
-              child: FooterSocial(),
-            ),
-            Expanded(
-              child: FooterNav(),
-            )
-          ],
-        ),
-        SizedBox(
-          height: 5,
-        ),
-      ],
+    return const Visibility(
+      visible: false,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Divider(),
+          SizedBox(
+            height: 5,
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: FooterSocial(),
+              ),
+              Expanded(
+                child: FooterNav(),
+              )
+            ],
+          ),
+          SizedBox(
+            height: 5,
+          ),
+        ],
+      ),
     );
   }
 }

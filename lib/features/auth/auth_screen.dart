@@ -1,10 +1,10 @@
+import 'package:flashcoders/features/auth/m_auth_screen.dart';
 import 'package:flashcoders/global_components/app_bar/x_app_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../../global_components/xresponsive_wrapper.dart';
 import 'desktop_component/google_sign_in_button.dart';
-import 'desktop_component/select_role.dart';
-import 'm_auth_screen.dart';
+
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
@@ -46,10 +46,6 @@ class AuthScreen extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      const SelectRole(),
-                      const SizedBox(
-                        height: 30,
-                      ),
                       SizedBox(
                         width: 700,
                         child: Row(
@@ -63,13 +59,7 @@ class AuthScreen extends StatelessWidget {
                       const SizedBox(
                         height: 20,
                       ),
-                      const Text(
-                        "Note: You can select multiple roles, minimum 1 role is required to continue.",
-                        style: TextStyle(
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
+                      
                     ],
                   ),
                 ),

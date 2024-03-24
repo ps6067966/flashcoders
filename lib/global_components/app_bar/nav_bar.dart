@@ -1,5 +1,4 @@
 import 'package:flashcoders/features/flutter-institute/desktop_components/flutter_institute_nav_text_btn.dart';
-import 'package:flashcoders/features/marketplace/component/marketplace_nav_text_btn.dart';
 import 'package:flutter/material.dart';
 
 import '../../features/admin/components/admin_panel_nav_text_btn.dart';
@@ -16,10 +15,6 @@ class NavBar extends StatelessWidget {
       children: [
         AdminPanelNavTextButton(),
         FlutterInstituteNavTextButton(),
-        MarketplaceNavTextButton(),
-        SizedBox(
-          width: 24,
-        ),
         DocsNavTextButton(),
         SizedBox(
           width: 24,

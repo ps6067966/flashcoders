@@ -25,8 +25,8 @@ class FlashCoders extends StatelessWidget {
           ],
         ),
         themeMode: ThemeMode.dark,
-        theme: AppTheme.getTheme(),
-        darkTheme: AppTheme.getTheme(),
+        theme: AppTheme.lightTheme(),
+        darkTheme: AppTheme.darkTheme(),
         routerConfig: appRouter,
       ),
     );

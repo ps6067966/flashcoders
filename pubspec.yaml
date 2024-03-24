@@ -36,6 +36,7 @@ dependencies:
   go_router: ^13.2.1
   google_fonts: ^6.2.1
   google_sign_in: ^6.2.1
+  google_generative_ai: ^0.2.2
 
   #h
   html_viewer_elite: ^0.0.4

@@ -3,7 +3,6 @@ import 'package:flashcoders/global_components/x_drawer.dart';
 import 'package:flutter/material.dart';
 
 import 'desktop_component/google_sign_in_button.dart';
-import 'mobile_component/m_select_role.dart';
 
 class MAuthScreen extends StatelessWidget {
   const MAuthScreen({super.key});
@@ -44,7 +43,6 @@ class MAuthScreen extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      const MSelectRole(),
                       const SizedBox(
                         height: 30,
                       ),

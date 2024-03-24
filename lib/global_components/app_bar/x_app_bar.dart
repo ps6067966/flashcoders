@@ -22,7 +22,7 @@ class XAppBar extends StatelessWidget implements PreferredSizeWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             LogoWithText(),
-            NavBar(),
+            // NavBar(),
           ],
         ),
       ),
